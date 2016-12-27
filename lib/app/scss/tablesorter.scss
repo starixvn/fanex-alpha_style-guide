@@ -120,8 +120,9 @@
             }
 
             .prior-sortedcolumn {
+                display: inline-block;
                 position: relative;
-                padding-right: 16px;
+                padding-right: 16px;                
 
                 &:after {
                     @extend %alphaIcon;
@@ -132,4 +133,5 @@
         }
     }
 }
+
 

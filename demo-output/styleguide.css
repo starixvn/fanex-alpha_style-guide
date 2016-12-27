@@ -68,6 +68,10 @@ body {
   font-family: Roboto, Arial, Tahoma, sans-serif;
   font-size: 13px; }
 
+ul li.ng-scope {
+  list-style: none;
+  line-height: 28px; }
+
 .sg.view-index {
   height: 100%; }
 
@@ -112,13 +116,13 @@ ul {
   padding-left: 16px; }
 
 .icon-loading-small {
-  background: url("../assets/img/ajax-loader.gif") no-repeat;
+  background: url("../assets/img/ajax-loader-8.gif") no-repeat;
   display: inline-block;
   width: 16px;
   height: 16px; }
 
 .icon-loading-large {
-  background: url("../assets/img/loader3.gif") no-repeat;
+  background: url("../assets/img/ajax-loader.gif") no-repeat;
   display: inline-block;
   width: 54px;
   height: 55px; }
@@ -1572,13 +1576,9 @@ tr.thead-row2-pt th {
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
 
-/* File Created: November 14, 2012 */
 .demo-nexdatepicker {
   display: table;
   margin-bottom: 300px; }
-
-.filter .form-group.nexDatePicker {
-  margin-right: 0; }
 
 .ui_nexdatepicker {
   float: left;
@@ -1594,13 +1594,20 @@ tr.thead-row2-pt th {
   text-align: right;
   margin: 0;
   padding: 5px 6px 5px 0px; }
+  .ui_nexdatepicker_lbl_field.separator {
+    margin-right: 12px; }
 
 .ui_nexdatepicker_edit_field {
   float: left;
   margin: 0 16px 0 0; }
+  .ui_nexdatepicker_edit_field.todate {
+    margin-right: 0; }
 
 .ui_nexdatepicker_edit_field select {
   cursor: pointer; }
+
+.input-group.date .input-group-addon {
+  padding-right: 0; }
 
 .monthpicker-container {
   display: table;
@@ -2605,7 +2612,6 @@ tr.thead-row2-pt th {
 .multiselect-container.dropdown-menu {
   border: 1px solid #dfdfdf;
   font-size: 13px;
-  min-width: initial;
   -webkit-border-radius: 1px;
   -khtml-border-radius: 1px;
   -moz-border-radius: 1px;
@@ -2737,6 +2743,7 @@ tr.thead-row2-pt th {
     .tablesorter .sorting.col-combine:after {
       display: none; }
     .tablesorter .sorting.col-combine .prior-sortedcolumn {
+      display: inline-block;
       position: relative;
       padding-right: 16px; }
       .tablesorter .sorting.col-combine .prior-sortedcolumn:after {

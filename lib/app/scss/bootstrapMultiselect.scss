@@ -143,7 +143,6 @@ $dropdown-border: $border-color;
 .multiselect-container.dropdown-menu {
     border: 1px solid $dropdown-border;
     font-size: 13px;
-    min-width: initial;
     @include effect-normal;
 
     > li:hover > a {
