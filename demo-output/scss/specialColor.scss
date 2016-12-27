@@ -1,6 +1,6 @@
 // Special color
 //
-// Styleguide 7.0
+// Styleguide 6.0
 
 // Customer status
 //
@@ -12,7 +12,7 @@
 // markup:
 // <div class="{$modifiers}">{$modifiers}</div>
 //
-// Styleguide 7.1
+// Styleguide 6.1
 
 $status-closed: #ccc7ba;
 $status-suspended: #f8ded7;
@@ -46,7 +46,7 @@ $status-live: #ffddcc;
 // <p class="msg-special">Special Messages</p>
 // <p class="msg-public">Public Messages</p>
 //
-// Styleguide 7.2
+// Styleguide 6.2
 
 $msg-private: #18910b;
 $msg-special: #9d1c1c;
@@ -71,7 +71,7 @@ $msg-public: #333;
 // markup:
 // <div class="hasBorder styleguide-color page-bg">$bg-color</div>
 //
-// Styleguide 7.3
+// Styleguide 6.3
 
 // styleguide:ignore:start
 .page-bg {
@@ -87,7 +87,7 @@ $msg-public: #333;
 // markup:
 // <a href="javascript;" style="color: {$modifiers}">Link color</a>
 //
-// Styleguide 7.4
+// Styleguide 6.4
 
 // Note color
 //
@@ -97,7 +97,7 @@ $msg-public: #333;
 // <p class="note">The Date & Time settings on your device must be set to Automatic.</p>
 // <p class="note"><span class="note-red">*</span>The Date & Time settings on your device must be set to Automatic.</p>
 //
-// Styleguide 7.5
+// Styleguide 6.5
 
 .note {
     color: #666;
@@ -119,16 +119,21 @@ $msg-public: #333;
 // <div><img src="assets/img/tooltip-error.png" title="Error" /></div>
 // <div><img src="assets/img/tooltip-warning.png" title="Warning" /></div>
 //
-// Styleguide 7.6
+// Styleguide 6.6
 
 // Filter
 //
 // <strong>Invalidate components</strong> use border-color: <strong>#e9322d</strong>
 //
 // markup:
-// <select class="error"></select>
+// <select class="error">
+//    <option>---</option>
+//    <option>1</option>
+//    <option>2</option>
+//    <option>3</option>
+// </select>
 //
-// Styleguide 7.7
+// Styleguide 6.7
 
 $filter-error-border-color: #e9322d;
 

@@ -2,7 +2,7 @@
 //
 // <p><a href="http://getbootstrap.com/javascript/#tabs" target="_blank"><strong>Tabs</strong></a> are elements that help you organize and navigate multiple documents in a single container. They can be used for switching between items in the container.</p>
 //
-// Styleguide 5.8
+// Styleguide 4.8
 
 // Basic tabs
 //
@@ -42,7 +42,7 @@
 //    <div role="tabpanel" class="tab-pane" id="tabCockfighting">...</div>
 //  </div>
 //
-// Styleguide 5.8.1
+// Styleguide 4.8.1
 
 $tab-color: #666;
 
@@ -127,7 +127,7 @@ $tab-color: #666;
 //    <div role="tabpanel" class="tab-pane" id="tabCockfighting3">...</div>
 //  </div>
 //
-// Styleguide 5.8.2
+// Styleguide 4.8.2
 
 .level-super {
     &.nav-tabs > li.active > a, &.nav-tabs > li.active > a:focus,
@@ -185,7 +185,7 @@ $tab-color: #666;
 //    <div role="tabpanel" class="tab-pane" id="tabCockfighting1">...</div>
 //  </div>
 //
-// Styleguide 5.8.3
+// Styleguide 4.8.3
 
 .level-master {
     &.nav-tabs > li.active > a, &.nav-tabs > li.active > a:focus,
@@ -243,7 +243,7 @@ $tab-color: #666;
 //    <div role="tabpanel" class="tab-pane" id="tabCockfighting2">...</div>
 //  </div>
 //
-// Styleguide 5.8.4
+// Styleguide 4.8.4
 
 .level-agent {
     &.nav-tabs > li.active > a, &.nav-tabs > li.active > a:focus,
