@@ -1,0 +1,190 @@
+﻿/* styleguide variables */
+
+// Common
+$font-family: Roboto, Arial, Tahoma, sans-serif;
+$font-size: 13px;
+$text-color: #333;
+$bg-color: #F4F4F4;
+$border-color: #dfdfdf;
+$border-color-dark: #cecece;
+$height-normal: 28px;
+$link-color: #045ace;
+$link-hover-color: #F60;
+$text-red-color: #9d1c1c;
+
+$icon-version: joh3s3;
+$font-size: 13px;
+$text-color: #333;
+
+$tab-color: #666;
+
+$btn-bg: #e1e1e1;
+$btn-color: #212121;
+$btn-bg-hover: #e1e1e1;
+$btn-color-hover: #212121;
+$btn-bg-hover: darken($btn-bg, 5%);
+
+$btn-submit-bg: #0b599c;
+$btn-submit-color: #fff;
+$btn-submit-bg-hover: darken($btn-submit-bg, 5%);
+$btn-submit-color-hover: #fff;
+
+$btn-reset-bg: #F6731B;
+$btn-reset-color: #fff;
+$btn-reset-bg-hover: darken($btn-reset-bg, 5%);
+$btn-reset-color-hover: #fff;
+
+$btn-refresh-bg: #1bac69;
+$btn-refresh-color: #fff;
+$btn-refresh-bg-hover: darken($btn-refresh-bg, 5%);
+$btn-refresh-color-hover: #fff;
+
+$btn-cancel-bg: #909090;
+$btn-cancel-color: #fff;
+$btn-cancel-bg-hover: darken($btn-cancel-bg, 5%);
+$btn-cancel-color-hover: #fff;
+
+// Dropdown
+$dropdown-color: $text-color;
+$dropdown-color-disable: #888;
+$dropdown-bg: #fff;
+$dropdown-bg-hover: #ddd;
+$dropdown-bg-active: #337AB7;
+$dropdown-color-active: #fff;
+$dropdown-border: $border-color;
+
+// Message
+$msg-private: #18910b;
+$msg-special: $text-red-color;
+$msg-public: $text-color;
+
+$msg-warning-bg: #faf8dd;
+$msg-warning-color: #7e3d00;
+$msg-warning-border: #bcba7d;
+$msg-warning-icon-color: #f08708;
+
+$msg-error-bg: #fadddd;
+$msg-error-color: #fe0000;
+$msg-error-border: #ef2d2d;
+
+$msg-success-bg: #eefbe9;
+$msg-success-color: #52a220;
+$msg-success-border: #1db51a;
+
+$msg-info-bg: #e3f5fa;
+$msg-info-color: #326cb4;
+$msg-info-border: #3475c7;
+
+// Paging
+$paging-bg: #fff;
+$paging-btn-bg: #979797;
+$paging-btn-color: #fff;
+$paging-btn-bg-hover: #676767;
+$paging-border: #666;
+
+// Table
+$table-red-color: #B50000;
+$table-td-hover-color: #f8eb95;
+$table-border-color: #d1d1d1;
+$table-header-bg-color: #666;
+$table-header-color: #fff;
+$table-subheader-bg-color: #3f3f3f;
+$table-subheader-color: #fff;
+$table-compopent-height: 22px;
+$table-compopent-height-large: 28px;
+$table-even-bg: #eae9ee;
+$table-odd-bg: #fff;
+$table-footer-bg: #7f3d1d;
+$table-footer-color: #fff;
+$table-league-bg: #f3f5e0;
+$table-live-bg: #f9ceae;
+
+// Devices 
+$screen-device-lower768: 767px;
+$screen-device-greater768: 768px;
+$screen-device-greater1024: 1024px;
+
+$content-gutter-width: 24px; // padding-left: 12px; padding-right: 12px;
+$conent-device-lower768: (767px - $content-gutter-width);
+$conent-device-greater768: (768px - $content-gutter-width);
+$conent-device-greater1024: (1024px - $content-gutter-width);
+
+
+/* Main color definitions */
+$primary-color: #1C3849 !default;
+$secondary-color: #E4E4E4 !default;
+$tertiary-color: #F7FCF1 !default; 
+
+/* Level color */
+$super-level-color: #67151b;
+$master-level-color: #276443;
+$agent-level-color: #516e8f;
+
+/* Button and link colors */
+$primary-action-color: #EB7F00 !default;
+$default-action-color: #1695A3 !default;
+$action-color-change: 5% !default;
+
+/* Navigation */
+$header-text-color: #FFFFFF !default;
+$navigation-arrows-visible: false;
+$header-background-color: $primary-color !default;
+$nav-background-color: $primary-color !default;
+
+$nav-button-color: $primary-color !default;
+$nav-button-text-color: color($default-action-color blackness(10%)) !default;
+$nav-button-ref-color: $secondary-color !default;
+$active-nav-button-color: $default-action-color !default;
+$active-nav-button-text-color: #FFFFFF !default;
+$active-nav-button-ref-color: #FFFFFF !default;
+
+$nav-item-color: $secondary-color !default;
+$nav-item-text-color: $default-action-color !default;
+$nav-item-ref-color: color($default-action-color blackness(10%)) !default;
+
+/* Header */
+$section-header-color: $primary-color !default;
+$section-header-ref-color: #FFFFFF !default;
+$section-header-text-color: $secondary-color !default;
+$section-header-source-text-color: rgba($secondary-color, 0.6) !default;
+
+$min-content-margin: 13px !default;
+$content-margin: 30px !default;
+
+/* Misc */
+$designer-tool-width: 30% !default;
+$designer-tool-width-mobile: 90% !default;
+$header-height: 70px !default;
+$menu-height: 40px !default;
+$sub-menu-height: 30px !default;
+$wrapper-vertical-padding: 60px !default;
+
+$content-max-width: 100% !default;
+
+// Fonts
+@font-face {
+    font-family: 'Roboto';
+    src:    url('../assets/fonts/roboto/Roboto-Regular.woff2') format("woff2");
+    src:   url('../assets/fonts/roboto/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src:    url('../assets/fonts/roboto/Roboto-Medium.woff2') format("woff2");
+    src:    url('../assets/fonts/roboto/Roboto-Medium.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Iconalpha';
+    src:    url('../assets/fonts/iconalpha/fonts/Iconalpha.eot?jmhb4u');
+    src:    url('../assets/fonts/iconalpha/fonts/Iconalpha.eot?jmhb4u#iefix') format('embedded-opentype'),
+        url('../assets/fonts/iconalpha/fonts/Iconalpha.ttf?jmhb4u') format('truetype'),
+        url('../assets/fonts/iconalpha/fonts/Iconalpha.woff?jmhb4u') format('woff'),
+        url('../assets/fonts/iconalpha/fonts/Iconalpha.svg?jmhb4u#Iconalpha') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

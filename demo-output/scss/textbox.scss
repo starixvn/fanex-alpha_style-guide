@@ -1,0 +1,45 @@
+// Text box
+//
+// <p>If you want to apply this style, please use this file "<strong>styles/components/textboxes.css</strong>"</p>
+// 
+// markup:
+// <div class="form-group"><input type="text" class="textbox" placeholder="Search..." /></div>
+// <div class="form-group"><input type="text" class="textbox hasBorder" value="Username" /></div>
+// <div class="form-group"><input type="text" class="textbox" value="Username" disabled /></div>
+//
+// Styleguide 1.6
+
+$border-color: #dfdfdf;
+
+.textbox {
+    width: 200px;
+}
+
+input {
+    outline: none;
+}
+
+input[type='text'], input[type='password'], input[type='email'] {    
+    height: $height-normal;
+    line-height: $height-normal;
+    border: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    -webkit-appearance: none;
+    @include effect-textbox;
+    @include box-sizing;
+
+    &.hasBorder {
+        border: 1px solid $border-color;
+    }
+
+    &::-ms-clear {
+      display: none;
+    }
+
+    &[disabled], .disabled {
+       opacity: .4;
+       cursor: not-allowed;
+    }
+}
+

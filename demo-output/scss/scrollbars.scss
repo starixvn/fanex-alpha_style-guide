@@ -1,0 +1,36 @@
+// Scrollbar
+//
+// Highly customizable custom <strong>scrollbar jQuery plugin (<a href="http://manos.malihu.gr/jquery-custom-content-scroller/" target="_blank"><strong>mCustomScrollbar</strong></a>)</strong>, featuring <strong>vertical/horizontal</strong> scrollbars, <strong>scrolling momentum</strong>, <strong>mouse-wheel</strong>, <strong>keyboard</strong> and <strong>touch support</strong> etc. http://manos.malihu.gr/jquery-custom-content-scroller
+// <h4 class="guide-title">How to use</h4>
+// <p>If you want to apply this style, please use these following files:
+// <ul>
+//     <li>styles/<strong>vendors</strong>/jquery.mCustomScrollbar.css</li>
+//     <li>--- For javacript ---</li>
+//     <li>js/<strong>libs</strong>/<strong>jquery</strong>/jquery-1.11.3.js</li>
+//     <li>js/<strong>components</strong>/<strong>scrollbar</strong>/jquery.mCustomScrollbar.concat.js</li>
+// </ul>
+// <a href='http://10.19.10.95:3000/section/5.12/fullscreen' target="_blank"><strong>Click here to view scrollbar demo</strong></a>
+//
+// markup:
+//  <section class="scrollbar-container mCustomScrollbar" data-mcs-theme="minimal-dark">
+//      Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.
+//      Veniam marfa mustache skateboard, adipisicing fugiat velit pitchfork beard. Freegan beard aliqua cupidatat mcsweeney's vero. Cupidatat four loko nisi, ea helvetica nulla carles. Tattooed cosby sweater food truck, mcsweeney's quis non freegan vinyl. Lo-fi wes anderson +1 sartorial. Carles non aesthetic exercitation quis gentrify. Brooklyn adipisicing craft beer vice keytar deserunt.
+//      one
+//      Occaecat commodo aliqua delectus. Fap craft beer deserunt skateboard ea. Lomo bicycle rights adipisicing banh mi, velit ea sunt next level locavore single-origin coffee in magna veniam. High life id vinyl, echo park consequat quis aliquip banh mi pitchfork. Vero VHS est adipisicing. Consectetur nisi DIY minim messenger bag. Cred ex in, sustainable delectus consectetur fanny pack iphone.
+//      two
+//      In incididunt echo park, officia deserunt mcsweeney's proident master cleanse thundercats sapiente veniam. Excepteur VHS elit, proident shoreditch +1 biodiesel laborum craft beer. Single-origin coffee wayfarers irure four loko, cupidatat terry richardson master cleanse. Assumenda you probably haven't heard of them art party fanny pack, tattooed nulla cardigan tempor ad. Proident wolf nesciunt sartorial keffiyeh eu banh mi sustainable. Elit wolf voluptate, lo-fi ea portland before they sold out four loko. Locavore enim nostrud mlkshk brooklyn nesciunt.
+//      three
+//      Ad leggings keytar, brunch id art party dolor labore. Pitchfork yr enim lo-fi before they sold out qui. Tumblr farm-to-table bicycle rights whatever. Anim keffiyeh carles cardigan. Velit seitan mcsweeney's photo booth 3 wolf moon irure. Cosby sweater lomo jean shorts, williamsburg hoodie minim qui you probably haven't heard of them et cardigan trust fund culpa biodiesel wes anderson aesthetic. Nihil tattooed accusamus, cred irony biodiesel keffiyeh artisan ullamco consequat.
+//      Keytar twee blog, culpa messenger bag marfa whatever delectus food truck. Sapiente synth id assumenda. Locavore sed helvetica cliche irony, thundercats you probably haven't heard of them consequat hoodie gluten-free lo-fi fap aliquip. Labore elit placeat before they sold out, terry richardson proident brunch nesciunt quis cosby sweater pariatur keffiyeh ut helvetica artisan. Cardigan craft beer seitan readymade velit. VHS chambray laboris tempor veniam. Anim mollit minim commodo ullamco thundercats.
+//  </section>
+// 
+// Styleguide 5.12
+
+// styleguide:ignore:start
+.scrollbar-container {
+    height: 200px;
+    line-height: 2;
+    width: 600px;
+    background-color: #f4f4f4;
+}
+// styleguide:ignore:end

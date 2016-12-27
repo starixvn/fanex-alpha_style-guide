@@ -1,0 +1,44 @@
+﻿// Tooltips
+//
+// <p><a href="http://getbootstrap.com/javascript/#tooltips" target="_blank"><strong>Bootstrap tooltips</strong></a> don't rely on images, use <strong>CSS3</strong> for animations, and <strong>data-attributes</strong> for <strong>local title storage</strong>.<br>
+// <strong>Four options</strong> are available: <strong>top, right, bottom, and left aligned</strong>.</p>
+// <h4 class="guide-title">How to use</h4>
+// <p>If you want to use this style, please create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and <br> copy only necessary CSS codes for tooltips from this file "<strong>styles/vendors/bootstrap.scss</strong>"
+// <p><strong>For example:</strong></p> 
+// <ul class="list-unstyled">
+//    <li>styles/<strong>vendors-extensions</strong>/<strong>site-main</strong>/bootstrap-ex.scss</li>
+//    <li>--- For example ---</li>
+//    <li>js/libs/<strong>jquery</strong>/jquery-1.11.3.js</li>
+//    <li>js/libs/<strong>bootstrap</strong>/tooltip.js</li>
+// </ul>
+//
+// markup:
+// <div sg-tooltip class="container-tooltip">
+//     <div class="text-center">
+//         <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>        
+//         <button type="button" class="btn btn-submit" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
+//         <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
+//         <button type="button" class="btn btn-submit" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+//     </div>
+// </div>
+//
+// sg-angular-directive:
+// name: sgTooltip
+// file: js/styleguide/initializeTooltip.js
+//
+// Styleguide 5.4
+
+// styleguide:ignore:start
+.container-tooltip {
+    height: 200px;
+    padding: 50px 0;
+
+    .text-center {
+        line-height: 40px;
+    }
+
+    .tooltip {
+        border: none;
+    }
+}
+// styleguide:ignore:end

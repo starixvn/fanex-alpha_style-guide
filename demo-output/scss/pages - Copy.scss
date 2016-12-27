@@ -1,0 +1,217 @@
+// Pages
+//
+// Styleguide 6
+
+@import 'sidebar.scss';
+
+// Login page
+//
+// markup:
+// <div sg-login-page>If you see this something is wrong</div>
+//
+// sg-angular-directive:
+// name: sgLoginPage
+// file: js/styleguide/login.js
+//
+// Styleguide 6.2
+
+// styleguide:ignore:start
+.container-login {
+    .txt {
+        @include box-shadow-multiple(none);
+    }
+
+    .btn-default {
+        color: #333;
+        background: transparent;
+        @include box-shadow-multiple(none);
+
+        &:hover, &:focus {
+            background: transparent;
+        }
+    }
+}
+// styleguide:ignore:end
+
+$outline-color: #c4c4c4;
+$text-color: #67151b;
+
+div.container-login {
+    background-color: #67151b;
+    font-family: 'Arial';
+    font-size: 14px;
+    padding: 130px;
+}
+
+.login-page {
+    margin: auto;
+    width: 300px;
+    background: #fff;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    .box {
+        padding: 0;
+    }
+    .txt {
+        border: none;
+        outline: none;
+        width: 100%;
+        border-bottom: 1px solid $outline-color;
+        height: 38px;
+        line-height: 38px;
+        padding: 8px 0 8px 35px;
+        font-size: 16px;
+        color: #888888;
+        &:focus {
+            border-bottom: 2px solid $text-color;
+            color: $text-color;
+            + [class^="icon"] {
+                 color: $text-color;
+            }
+        }
+    }
+    .rowlg {
+        margin-bottom: 15px;
+        position: relative;
+        [class^="icon"] {
+            color: #cccccc;
+            font-size: 16px;
+        }
+        &.box [class^="icon"] {
+            position: absolute;
+            left: 0;
+            top: 8px;
+        }
+    }
+    .btnLogin {
+        width: 100%;
+        background: $text-color;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 10px 0;
+        text-align: center;
+        border: none;
+        font-family: Arial;
+        cursor: pointer;
+        &:hover {
+            background: #921f27;
+        }
+    }
+
+    .flag {
+        background: url(assets/img/flag-lg.png) no-repeat;
+        display: inline-block;
+        width: 23px;
+        height: 16px;
+        position: relative;
+        top: 3px;
+        margin-right: 10px;
+
+        &.flag-en {
+            background-position: 0 0px;
+        }
+        &.flag-cn {
+            background-position: 0 -17px;
+        }
+        &.flag-tw {
+            background-position: 0 -34px;
+        }
+        &.flag-jp {
+            background-position: 0 -50px;
+        }
+        &.flag-th {
+            background-position: 0 -69px;
+        }
+        &.flag-kr {
+            background-position: 0 -86px;
+        }
+        &.flag-vn {
+            background-position: 0 -104px;
+        }
+    }
+
+    .dropdown {
+        button {
+            border: none;
+            &:hover, &:focus {
+                background: transparent;
+            } 
+            &.btn {
+                padding-left: 0;
+            }
+        }    
+        .dropdown-menu {
+            @include border-radius(1px);
+            @include effect-normal;
+        }
+    }
+    .btn-default.active, .btn-default:active, .open > .dropdown-toggle.btn-default,
+    .btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default.focus:active, .btn-default:active:focus, .btn-default:active:hover, .open > .dropdown-toggle.btn-default.focus, .open > .dropdown-toggle.btn-default:focus, .open > .dropdown-toggle.btn-default:hover{
+        background: transparent;    
+        outline: none;
+        border: none;
+        @include box-shadow-multiple(none);
+    }
+}
+
+
+// Under Maintenance page
+//
+// markup:
+// <div class="page-UM">
+//     <h1 class="title"><span class="icon-alert"></span>Under Maintenance</h1>
+//     <h2 class="sub-title">Dear Valued Customers:</h2>
+//     <p>We are having server maintenance, website will be unavailable from <br />
+//         HK time <span class="txt-red">12:30PM until 14:00PM</span>(GMT+ 8). Sorry for the inconvenience caused.</p>
+//     <h2 class="sub-title second">尊敬的客戶:</h2>
+//     <p>
+//         本公司將於香港時間<span class="txt-red">12:30PM 至 14:00PM</span>(GMT +8) 對服務器進行維護，期間所有的網頁將無法登入，不便之處，敬請諒解
+//     </p>
+// </div>
+//
+// Styleguide 6.3
+
+// styleguide:ignore:start
+.page-UM {
+    color: #333;
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: 2;
+}
+
+.title {
+    padding-bottom: 6px;
+}
+
+.sub-title {
+    font-weight: bold;
+}
+
+// styleguide:ignore:end
+.title {
+    color: #e94201;
+    font-weight: bold;
+    font-size: 22px;
+    border-bottom: 1px solid #cfd7e0;
+    margin: 0;
+
+    .icon-alert {
+        margin-right: 6px;
+        font-size: 40px;
+        position: relative;
+        top: 8px;
+    }
+}
+
+.sub-title {
+    font-size: 14px;
+    margin-top: 16px;
+
+    &.second {
+        margin-top: 50px;
+    }
+}
+
+.txt-red {
+    color: #b00000;
+}

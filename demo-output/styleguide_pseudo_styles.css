@@ -1,0 +1,636 @@
+a.pseudo-class-hover,
+a.pseudo-class-active,
+a.pseudo-class-focus {
+  color: #F60;
+  text-decoration: none;
+}
+
+.btn-default.pseudo-class-hover {
+  color: #212121;
+  background-color: #d4d4d4;
+}
+
+.btn-default.pseudo-class-hover[disabled],
+.btn-default.pseudo-class-hover .disabled {
+  background-color: #e1e1e1;
+  color: #212121;
+}
+
+.btn-submit.pseudo-class-hover,
+.btn-submit.pseudo-class-active,
+.btn-submit.pseudo-class-focus {
+  background-color: #094b84;
+  color: #fff;
+}
+
+.btn-submit.pseudo-class-hover[disabled],
+.btn-submit.pseudo-class-hover .disabled,
+.btn-submit.pseudo-class-active[disabled],
+.btn-submit.pseudo-class-active .disabled,
+.btn-submit.pseudo-class-focus[disabled],
+.btn-submit.pseudo-class-focus .disabled {
+  background-color: #0b599c;
+  color: #fff;
+}
+
+input[type=reset].pseudo-class-hover,
+.btn-reset.pseudo-class-hover {
+  color: #fff;
+  background-color: #ee6509;
+}
+
+input[type=reset].pseudo-class-hover[disabled],
+input[type=reset].pseudo-class-hover .disabled,
+.btn-reset.pseudo-class-hover[disabled],
+.btn-reset.pseudo-class-hover .disabled {
+  background-color: #F6731B;
+  color: #fff;
+}
+
+.btn-refresh.pseudo-class-hover,
+.btn-refresh.pseudo-class-active,
+.btn-refresh.pseudo-class-focus {
+  background-color: #18965c;
+  color: #fff;
+}
+
+.btn-refresh.pseudo-class-hover[disabled],
+.btn-refresh.pseudo-class-hover .disabled,
+.btn-refresh.pseudo-class-active[disabled],
+.btn-refresh.pseudo-class-active .disabled,
+.btn-refresh.pseudo-class-focus[disabled],
+.btn-refresh.pseudo-class-focus .disabled {
+  background-color: #1bac69;
+  color: #fff;
+}
+
+.btn-cancel.pseudo-class-hover,
+.btn-cancel.pseudo-class-active,
+.btn-cancel.pseudo-class-focus {
+  background-color: #838383;
+}
+
+.btn-cancel.pseudo-class-hover[disabled],
+.btn-cancel.pseudo-class-hover .disabled,
+.btn-cancel.pseudo-class-active[disabled],
+.btn-cancel.pseudo-class-active .disabled,
+.btn-cancel.pseudo-class-focus[disabled],
+.btn-cancel.pseudo-class-focus .disabled {
+  background-color: #909090;
+  color: #fff;
+}
+
+.btn-remove.pseudo-class-hover,
+.btn-remove.pseudo-class-active,
+.btn-remove.pseudo-class-focus {
+  background-color: #7b0811;
+}
+
+.btn-remove.pseudo-class-hover[disabled],
+.btn-remove.pseudo-class-hover .disabled,
+.btn-remove.pseudo-class-active[disabled],
+.btn-remove.pseudo-class-active .disabled,
+.btn-remove.pseudo-class-focus[disabled],
+.btn-remove.pseudo-class-focus .disabled {
+  background-color: #930a14;
+  color: #fff;
+}
+
+input[type=checkbox].pseudo-class-disabled,
+input[type=radio].pseudo-class-disabled {
+  cursor: not-allowed;
+}
+
+.checkbox input[type=checkbox].pseudo-class-checked + .checkbox-material .check:before,
+label.checkbox-inline input[type=checkbox].pseudo-class-checked + .checkbox-material .check:before {
+  -webkit-box-shadow: 0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px -12px 0 11px;
+  -khtml-box-shadow: 0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px -12px 0 11px;
+  -moz-box-shadow: 0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px -12px 0 11px;
+  -ms-box-shadow: 0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px -12px 0 11px;
+  -o-box-shadow: 0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px -12px 0 11px;
+  box-shadow: 0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px -12px 0 11px;
+}
+
+.form-group.is-focused .checkbox label.pseudo-class-hover,
+.form-group.is-focused .checkbox label.pseudo-class-focus,
+.form-group.is-focused .radio label.pseudo-class-hover,
+.form-group.is-focused .radio label.pseudo-class-focus {
+  color: #333;
+}
+
+.radio input[type=radio].pseudo-class-checked ~ .check,
+label.radio-inline input[type=radio].pseudo-class-checked ~ .check {
+  -webkit-transform: scale3d(0.35, 0.35, 1);
+  transform: scale3d(0.35, 0.35, 1);
+}
+
+.super .checkbox input[type=checkbox].pseudo-class-checked + .checkbox-material .check,
+.super label.checkbox-inline input[type=checkbox].pseudo-class-checked + .checkbox-material .check {
+  color: #67151b;
+  border-color: #67151b;
+}
+
+.super .checkbox input[type=checkbox].pseudo-class-checked + .checkbox-material .check:before,
+.super label.checkbox-inline input[type=checkbox].pseudo-class-checked + .checkbox-material .check:before {
+  color: #67151b;
+}
+
+.super .radio input[type=radio].pseudo-class-checked ~ .circle,
+.super label.radio-inline input[type=radio].pseudo-class-checked ~ .circle {
+  border-color: #67151b;
+}
+
+.super .radio input[type=radio].pseudo-class-checked ~ .check,
+.super label.radio-inline input[type=radio].pseudo-class-checked ~ .check {
+  background-color: #67151b;
+}
+
+.master .checkbox input[type=checkbox].pseudo-class-checked + .checkbox-material .check,
+.master label.checkbox-inline input[type=checkbox].pseudo-class-checked + .checkbox-material .check {
+  color: #276443;
+  border-color: #276443;
+}
+
+.master .checkbox input[type=checkbox].pseudo-class-checked + .checkbox-material .check:before,
+.master label.checkbox-inline input[type=checkbox].pseudo-class-checked + .checkbox-material .check:before {
+  color: #276443;
+}
+
+.master .radio input[type=radio].pseudo-class-checked ~ .circle,
+.master label.radio-inline input[type=radio].pseudo-class-checked ~ .circle {
+  border-color: #276443;
+}
+
+.master .radio input[type=radio].pseudo-class-checked ~ .check,
+.master label.radio-inline input[type=radio].pseudo-class-checked ~ .check {
+  background-color: #276443;
+}
+
+.agent .checkbox input[type=checkbox].pseudo-class-checked + .checkbox-material .check,
+.agent label.checkbox-inline input[type=checkbox].pseudo-class-checked + .checkbox-material .check {
+  color: #516e8f;
+  border-color: #516e8f;
+}
+
+.agent .checkbox input[type=checkbox].pseudo-class-checked + .checkbox-material .check:before,
+.agent label.checkbox-inline input[type=checkbox].pseudo-class-checked + .checkbox-material .check:before {
+  color: #516e8f;
+}
+
+.agent .radio input[type=radio].pseudo-class-checked ~ .circle,
+.agent label.radio-inline input[type=radio].pseudo-class-checked ~ .circle {
+  border-color: #516e8f;
+}
+
+.agent .radio input[type=radio].pseudo-class-checked ~ .check,
+.agent label.radio-inline input[type=radio].pseudo-class-checked ~ .check {
+  background-color: #516e8f;
+}
+
+.form-control.pseudo-class-focus {
+  -webkit-border-radius: 1px;
+  -khtml-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -khtml-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.form-control.pseudo-class-focus {
+  -webkit-border-radius: 1px;
+  -khtml-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -khtml-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.form-inline .dropdown .btn-default.pseudo-class-active {
+  color: #333;
+}
+
+.form-inline .dropdown .btn.btn-countdown.pseudo-class-hover {
+  background-color: #e1e1e1;
+}
+
+.form-inline .dropdown #refresh-value > li a.pseudo-class-hover {
+  color: #333;
+  background: #ddd;
+}
+
+.form-control.pseudo-class-focus {
+  -webkit-border-radius: 1px;
+  -khtml-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -khtml-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.tblRpt.tblRpt-hover tbody tr.pseudo-class-hover td {
+  background-color: #f8eb95;
+}
+
+.freegrid tr.highlight-row.pseudo-class-hover td {
+  background-color: #f8eb95;
+}
+
+.freegrid td.group-odd.pseudo-class-hover {
+  background-color: #eae9ee !important;
+}
+
+.freegrid td.group-even.pseudo-class-hover {
+  background-color: #fff !important;
+}
+
+#pagination .gotopage_box #pagenav_ibtn.pseudo-class-hover {
+  background-position: -3px -25px !important;
+}
+
+#pagination a.pseudo-class-hover {
+  -webkit-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  background: #979797;
+  color: #fff;
+  font-weight: normal;
+}
+
+#pagination .prev.pseudo-class-hover,
+#pagination .next.pseudo-class-hover {
+  background: #676767;
+}
+
+.input-group.date .icon-calendar.pseudo-class-hover:after {
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 36px;
+  height: 36px;
+  margin-left: -6px;
+  margin-top: -4px;
+  background: #b1aea3;
+  border-radius: 100%;
+  opacity: 1;
+  -webkit-transform: scale(0);
+  -khtml-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -moz-animation: ripple 1s ease-out;
+  -o-animation: ripple 1s ease-out;
+  -webkit-animation: ripple 1s ease-out;
+  animation: ripple 1s ease-out;
+}
+
+.bootstrap-datetimepicker-widget .datepicker-days .table-condensed > tbody > tr > td.active.pseudo-class-hover:after,
+.bootstrap-datetimepicker-widget table td span.active.month.pseudo-class-hover:after,
+.bootstrap-datetimepicker-widget table td span.active.year.pseudo-class-hover:after,
+.bootstrap-datetimepicker-widget table td span.active.decade.pseudo-class-hover:after {
+  animation: none;
+}
+
+.bootstrap-datetimepicker-widget .datepicker-days .table-condensed > tbody > tr > td.active.today.pseudo-class-hover,
+.bootstrap-datetimepicker-widget table td span.active.today.month.pseudo-class-hover,
+.bootstrap-datetimepicker-widget table td span.active.today.year.pseudo-class-hover,
+.bootstrap-datetimepicker-widget table td span.active.today.decade.pseudo-class-hover {
+  background-color: #337AB7;
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.bootstrap-datetimepicker-widget .datepicker-days .table-condensed > tbody > tr > td.disabled.pseudo-class-hover:after,
+.bootstrap-datetimepicker-widget table td span.disabled.month.pseudo-class-hover:after,
+.bootstrap-datetimepicker-widget table td span.disabled.year.pseudo-class-hover:after,
+.bootstrap-datetimepicker-widget table td span.disabled.decade.pseudo-class-hover:after {
+  animation: none;
+}
+
+.bootstrap-datetimepicker-widget .datepicker-days .table-condensed > tbody > tr > td.pseudo-class-hover:after,
+.bootstrap-datetimepicker-widget table td span.month.pseudo-class-hover:after,
+.bootstrap-datetimepicker-widget table td span.year.pseudo-class-hover:after,
+.bootstrap-datetimepicker-widget table td span.decade.pseudo-class-hover:after {
+  animation: 1s ease-out 0s normal 1 ripple;
+  background: #337AB7;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  transform: scale(0);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.bootstrap-datetimepicker-widget .datepicker-days table thead tr.pseudo-class-first-child th.pseudo-class-hover {
+  background: none;
+}
+
+.bootstrap-datetimepicker-widget .datepicker-days .table-condensed > tbody > tr > td.today.pseudo-class-hover {
+  background: none;
+}
+
+.bootstrap-datetimepicker-widget table td.day.pseudo-class-hover,
+.bootstrap-datetimepicker-widget table td.hour.pseudo-class-hover,
+.bootstrap-datetimepicker-widget table td.minute.pseudo-class-hover,
+.bootstrap-datetimepicker-widget table td.second.pseudo-class-hover {
+  background: none;
+}
+
+.bootstrap-datetimepicker-widget table td span.pseudo-class-hover {
+  background: none;
+}
+
+.monpickr-wrap-parent .monpickr-wrap .monpickr-dropdown ul li.year a.pseudo-class-hover,
+.monpickr-wrap-parent .monpickr-wrap .monpickr-dropdown ul li.year a.pseudo-class-focus {
+  color: #333;
+}
+
+.monpickr-wrap-parent .monpickr-wrap .monpickr-dropdown ul li.year.ui-corner-all.pseudo-class-hover,
+.monpickr-wrap-parent .monpickr-wrap .monpickr-dropdown ul .month-wrap li.pseudo-class-hover {
+  background: #ddd;
+}
+
+.monpickr-wrap-parent .monpickr-wrap .monpickr-dropdown ul li.year.ui-corner-all.pseudo-class-hover a,
+.monpickr-wrap-parent .monpickr-wrap .monpickr-dropdown ul .month-wrap li.pseudo-class-hover a {
+  color: #333;
+}
+
+.monpickr-wrap-parent .monpickr-wrap .monpickr-dropdown ul .month-wrap .ui-state-active.pseudo-class-hover {
+  background: #337AB7;
+}
+
+.monpickr-wrap-parent .monpickr-wrap .monpickr-dropdown ul .month-wrap .ui-state-active.pseudo-class-hover a {
+  color: #fff;
+}
+
+.daypickr-wrap-parent .daypickr-dropdown li.pseudo-class-hover {
+  background: #ddd;
+}
+
+.daypickr-wrap-parent .daypickr-dropdown li.pseudo-class-hover a {
+  color: #333;
+}
+
+.monpickr-arrows .monpickr-prev.pseudo-class-hover,
+.monpickr-arrows .monpickr-next.pseudo-class-hover,
+.monpickr-arrows .monpickr-down.pseudo-class-hover {
+  padding: 0;
+}
+
+.pagination .l-btn-plain.pseudo-class-hover {
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.pagination .pagination-first.pseudo-class-hover,
+.pagination .pagination-prev.pseudo-class-hover,
+.pagination .pagination-last.pseudo-class-hover,
+.pagination .pagination-next.pseudo-class-hover {
+  background-color: #676767;
+}
+
+.pagination .l-btn-disabled .pagination-first.pseudo-class-hover,
+.pagination .l-btn-disabled .pagination-prev.pseudo-class-hover,
+.pagination .l-btn-disabled .pagination-last.pseudo-class-hover,
+.pagination .l-btn-disabled .pagination-next.pseudo-class-hover {
+  background-color: #979797;
+}
+
+.pagingContainer li[disabled] .btn-page.pseudo-class-hover {
+  background-color: #979797;
+  opacity: 0.35;
+}
+
+.pagingContainer .btn-page.pseudo-class-hover {
+  background-color: #676767;
+}
+
+.pagingContainer .btn-page.pagingDisable.pseudo-class-hover {
+  cursor: default;
+  filter: alpha(opacity=35);
+  -moz-opacity: .35;
+  opacity: 0.35;
+}
+
+.modal-content .modal-header .modal-title .popup-title.pseudo-class-empty {
+  height: 20px;
+  display: block;
+}
+
+.modal-content .modal-footer button.pseudo-class-last-child {
+  margin-right: 0;
+}
+
+.bootbox .modal-footer .btn.pseudo-class-hover,
+.bootbox .modal-footer .btn.pseudo-class-focus {
+  background-color: #ececec;
+  border: none;
+  outline: none;
+}
+
+.nav-tabs > li > a.pseudo-class-hover {
+  background: none;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.nav-tabs > li.active > a.pseudo-class-focus,
+.nav-tabs > li.active > a.pseudo-class-hover {
+  border: none;
+  color: #666;
+  background: transparent;
+}
+
+.nav.nav-tabs > li.pseudo-class-hover:after {
+  width: 100%;
+  background: #666;
+}
+
+.level-super.nav-tabs > li.active > a.pseudo-class-focus,
+.level-super.nav-tabs > li.active > a.pseudo-class-hover,
+.level-super.nav-tabs > li > a.pseudo-class-hover {
+  color: #97141e;
+}
+
+.level-super.nav.nav-tabs > li.pseudo-class-hover:after {
+  background: #67151b;
+}
+
+.level-master.nav-tabs > li.active > a.pseudo-class-focus,
+.level-master.nav-tabs > li.active > a.pseudo-class-hover,
+.level-master.nav-tabs > li > a.pseudo-class-hover {
+  color: #209656;
+}
+
+.level-master.nav.nav-tabs > li.pseudo-class-hover:after {
+  background: #276443;
+}
+
+.level-agent.nav-tabs > li.active > a.pseudo-class-focus,
+.level-agent.nav-tabs > li.active > a.pseudo-class-hover,
+.level-agent.nav-tabs > li > a.pseudo-class-hover {
+  color: #2267b6;
+}
+
+.level-agent.nav.nav-tabs > li.pseudo-class-hover:after {
+  background: #516e8f;
+}
+
+.panel-group.panel-text .panel-heading .panel-title a.pseudo-class-focus {
+  outline: none;
+}
+
+.panel-group.panel-table .panel-heading .panel-title a.pseudo-class-focus {
+  outline: none;
+}
+
+.panel-group.panel-table .panel-heading .panel-title a.pseudo-class-hover {
+  border-color: #b3b3b3;
+}
+
+.dropdown .dropdown-menu > li a.pseudo-class-hover {
+  color: #333;
+  background: #ddd;
+}
+
+.dropdown .btn-default.pseudo-class-active {
+  color: #333;
+}
+
+.dropdown .btn.btn-countdown.pseudo-class-hover {
+  background-color: #e1e1e1;
+}
+
+.dropup .dropdown-menu > li a.pseudo-class-hover {
+  color: #333;
+  background: #ddd;
+}
+
+.dropup .btn-default.pseudo-class-active {
+  color: #333;
+}
+
+.form-inline .multiselect-container .active > a.pseudo-class-hover label,
+.form-inline .multiselect-container .active > a.pseudo-class-focus label {
+  color: #fff;
+}
+
+.btn-group button.multiselect.pseudo-class-hover {
+  color: inherit;
+}
+
+.btn-group button.multiselect.pseudo-class-focus,
+.btn-group button.multiselect.pseudo-class-visited {
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  -khtml-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.multiselect.btn-default.pseudo-class-active {
+  background: #fff;
+}
+
+.multiselect-container.dropdown-menu > li.pseudo-class-hover > a {
+  background-color: #ddd;
+}
+
+.multiselect-container.dropdown-menu .filter.pseudo-class-hover {
+  background: #fff;
+}
+
+.multiselect-container.dropdown-menu .filter .input-group .form-control.multiselect-search.pseudo-class-hover {
+  background: #fff;
+}
+
+.form-inline .multiselect-container .active > a.pseudo-class-hover label,
+.form-inline .multiselect-container .active > a.pseudo-class-focus label {
+  color: #333;
+}
+
+.dropdown-menu > .active > a.pseudo-class-hover,
+.dropdown-menu > .active > a.pseudo-class-focus {
+  background: none;
+  color: #333;
+}
+
+.menu-item > a.pseudo-class-hover {
+  background: #e5e5e5;
+}
+
+.login-style1 .icon-refresh.pseudo-class-hover {
+  background-position: -28px -29px;
+}
+
+.login-style1 .block .txt.pseudo-class-focus {
+  border-bottom: 2px solid #666;
+  color: #666;
+}
+
+.login-style1 .block .txt.pseudo-class-focus + .icon-user {
+  background-position: -54px -30px;
+}
+
+.login-style1 .block .txt.pseudo-class-focus + .icon-lock {
+  background-position: -78px -26px;
+}
+
+.login-style1 .block .btnLogin.pseudo-class-hover {
+  background-color: #1a7fd5;
+}
+
+.login-style1 .block .btnLogin[disabled].pseudo-class-hover,
+.login-style1 .block .btnLogin .disabled.pseudo-class-hover {
+  background-color: #258ce4;
+}
+
+.login-style1 .box-lang .btn.pseudo-class-active {
+  -webkit-box-shadow: none;
+  -khtml-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+
+.login-style1 .block-warning .content a.pseudo-class-hover {
+  color: #F60;
+}
+
+.login-style1 .block-warning .content .icon-close.pseudo-class-hover {
+  opacity: 0.7;
+}

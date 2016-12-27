@@ -1,0 +1,195 @@
+// Dropdown
+//
+// <p>Toggleable, contextual menu for displaying lists of links</p>
+//
+// Styleguide 5.10
+
+// Style 1 (Currently not available)
+//
+// Wrap <strong>the dropdown's trigger</strong> and the <strong>dropdown menu</strong> within <code>.dropdown</code>, or another element that declares <code>position: relative</code>;. Then add the menu's HTML.
+// <h4 class="guide-title">How to use</h4>
+// <p>If your microsite uses <strong>assets</strong>, please create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and <br> copy only necessary CSS codes for dropdowns from this file "<strong>styles/vendors/bootstrap.scss</strong>"
+//  <p><strong>For example:</strong></p> 
+//  <ul class="list-unstyled">
+//      <li>styles/vendors-extensions/<strong>site-main</strong>/bootstrap-ex.scss</li>
+//      <li>styles/<strong>components</strong>/dropdowns.scss</li>
+//      <li>--- About javascript ---</li>
+//      <li>js/libs/<strong>jquery</strong>/jquery-1.11.3.js</li>
+//      <li>js/libs/<strong>bootstrap</strong>/button.js</li>
+//      <li>js/libs/<strong>bootstrap</strong>/dropdown.js</li>
+//  </ul> 
+// 
+// markup:
+// <div class="dropdown demo-dropdown">
+//   <button id="dLabel" class="btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+//     Dropdown
+//     <span class="caret"></span>
+//   </button>
+//   <ul class="dropdown-menu" aria-labelledby="dLabel">
+//       <li><a href="#">Action</a></li>
+//       <li><a href="#">Another action</a></li>
+//       <li><a href="#">Something else here</a></li>
+//       <li role="separator" class="divider"></li>
+//       <li><a href="#">Separated link</a></li>
+//   </ul>
+// </div>
+//
+// Styleguide 5.10.1
+
+
+// styleguide:ignore:start
+.demo-dropdown {
+    margin-bottom: 100px;
+} 
+// styleguide:ignore:end
+
+.dropdown {
+    display: inline-block;   
+
+    .dropdown-menu {
+        border: 1px solid $dropdown-border;
+        padding: 0;
+        border-radius: 0;
+        min-width: 78px;
+        @include effect-normal;        
+
+        > li {
+            > a {
+                padding: 8px 15px;
+                font-size: $font-size;
+            }
+
+            a:hover {
+                color: $dropdown-color;
+                background: $dropdown-bg-hover;
+            }
+        }
+    }
+    
+    .btn-default:active, .btn-default.active, &.open>.btn-default.dropdown-toggle {
+        color: $dropdown-color;
+    }
+}
+
+// Style 1 with icon (Currently not available)
+// 
+// markup:
+//      <span class="dropdown demo-dropdown">
+//            <button class="btn btn-default btn-countdown dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+//                <span class="icon-refresh"></span>
+//                <span id="ddlRefresh">30</span>
+//                <span class="caret"></span>
+//            </button>
+//            <ul class="dropdown-menu" id="refresh-value" aria-labelledby="dropdownMenu2">
+//                <li><a href="javascript:void(0);" data-refresh-value="30">30</a></li>
+//                <li><a href="javascript:void(0);" data-refresh-value="45">45</a></li>
+//                <li><a href="javascript:void(0);" data-refresh-value="60">60</a></li>
+//            </ul>
+//        </span>
+//
+// Styleguide 5.10.2
+
+.dropdown {   
+
+    #refresh-value > li > a {
+        padding: 5px 32px;
+    }
+
+    .btn.btn-countdown {
+        background-color: #eee;
+        color: #212121;
+        padding: 6px 30px 6px 10px;
+        font-size: 13px;
+
+        &:hover {
+            background-color: #e1e1e1;
+        }
+
+        .caret {
+            top: 13px;
+            right: 17px;
+            position: absolute;
+        }
+
+        .icon-refresh:before {
+            content: '\e933';
+            font-family: 'Iconalpha';
+            font-size: 20px;
+            position: relative;
+            color: #212121;
+            left: -4px;
+            top: -2px;
+        }
+
+        #ddlRefresh {
+            position: relative;
+            top: -6px;
+        }
+    }
+}
+
+// Style 2 (Currently not available)
+//
+// Dropdown menus can be changed to <strong>expand upwards</strong> (instead of downwards) by adding <code>.dropup</code> to the parent.
+// 
+// markup:
+// <div class="dropup demo-dropup">
+//   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+//     Dropup
+//     <span class="caret"></span>
+//   </button>
+//   <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+//     <li><a href="#">Action</a></li>
+//     <li><a href="#">Another action</a></li>
+//     <li><a href="#">Something else here</a></li>
+//     <li role="separator" class="divider"></li>
+//     <li><a href="#">Separated link</a></li>
+//   </ul>
+// </div>
+//
+// Styleguide 5.10.3
+
+// styleguide:ignore:start
+.demo-dropup {
+    margin-top: 150px;
+} 
+// styleguide:ignore:end
+
+.dropup {
+    display: inline-block;
+
+    .caret {
+        top: 13px;
+        right: 17px;
+        position: absolute;
+    }
+
+    .dropdown-menu {
+        border: 1px solid $dropdown-border;
+        padding: 0;
+        border-radius: 0;
+        min-width: 78px;
+        @include box-shadow-multiple('0px -3px 6px rgba(0,0,0,.16),0 -3px 6px rgba(0,0,0,.23)');    
+        @include border-radius(1px);    
+
+        > li {
+            > a {
+                padding: 8px 15px;
+                font-size: $font-size;
+            }
+
+            a:hover {
+                color: $dropdown-color;
+                background: $dropdown-bg-hover;
+            }
+        }
+    }
+
+    .dropdown-toggle {
+        padding-right: 30px;
+    }
+
+    .btn-default:active, .btn-default.active, &.open>.btn-default.dropdown-toggle {
+        color: $dropdown-color;
+    }
+}

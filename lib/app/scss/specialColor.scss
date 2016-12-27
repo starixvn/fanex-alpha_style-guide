@@ -1,0 +1,137 @@
+﻿// Special color
+//
+// Styleguide 7.0
+
+// Customer status
+//
+// .status-closed - closed status
+// .status-suspended - suspended status
+// .status-disabled - disabled status
+// .status-live - live status
+//
+// markup:
+// <div class="{$modifiers}">{$modifiers}</div>
+//
+// Styleguide 7.1
+
+$status-closed: #ccc7ba;
+$status-suspended: #f8ded7;
+$status-disabled: #A0A97A;
+$status-live: #ffddcc;
+
+.status-closed {
+    background-color: $status-closed;
+    padding: 12px;
+}
+
+.status-suspended {
+    background-color: $status-suspended;
+    padding: 12px;
+}
+
+.status-disabled {
+    background-color: $status-disabled;
+    padding: 12px;
+}
+
+.status-live {
+    background-color: $status-live;
+    padding: 12px;
+}
+
+// Message color
+//
+// markup:
+// <p class="msg-private">Private Messages</p>
+// <p class="msg-special">Special Messages</p>
+// <p class="msg-public">Public Messages</p>
+//
+// Styleguide 7.2
+
+$msg-private: #18910b;
+$msg-special: #9d1c1c;
+$msg-public: #333;
+
+.msg-private {
+    color: $msg-private;    
+}
+
+.msg-special {
+    color: $msg-special;
+}
+
+.msg-public {
+    color: $msg-public;
+}
+
+// Site background
+//
+// $bg-color - Background-color of site
+//
+// markup:
+// <div class="hasBorder styleguide-color page-bg">$bg-color</div>
+//
+// Styleguide 7.3
+
+// styleguide:ignore:start
+.page-bg {
+    background-color: #f4f4f4;
+}
+// styleguide:ignore:end
+
+// Link color
+//
+// $link-color - a normal, unvisited link
+// $link-hover-color - a link when the user mouses over it
+//
+// markup:
+// <a href="javascript;" style="color: {$modifiers}">Link color</a>
+//
+// Styleguide 7.4
+
+// Note color
+//
+// <strong>Note</strong> uses this color <strong>#666</strong>.
+//
+// markup:
+// <p class="note">The Date & Time settings on your device must be set to Automatic.</p>
+// <p class="note"><span class="note-red">*</span>The Date & Time settings on your device must be set to Automatic.</p>
+//
+// Styleguide 7.5
+
+.note {
+    color: #666;
+
+    &-red {
+        color: #ff0101;
+        padding-right: 6px;
+    }  
+}
+
+// Tooltip color
+//
+// <strong>Success tooltips</strong> use background-color: <strong>#dfffe1</strong>, color: <strong>#333</strong>, border-color: <strong>#14b22a</strong>, border-radius: <strong>2px</strong>, border-width: <strong>2px</strong> <br>
+// <strong>Warning tooltips</strong> use background-color: <strong>#FFFFCC</strong>, color: <strong>#333</strong>, border-color: <strong>#CC9933</strong>, border-radius: <strong>2px</strong>, border-width: <strong>2px</strong> <br>
+// <strong>Error tooltips</strong> use background-color: <strong>#ffe8e8</strong>, color: <strong>#333</strong>, border-color: <strong>#e9322d</strong>, border-radius: <strong>2px</strong>, border-width: <strong>2px</strong> <br>
+//
+// markup:
+// <div><img src="assets/img/tooltip-success.png" title="Success" /></div>
+// <div><img src="assets/img/tooltip-error.png" title="Error" /></div>
+// <div><img src="assets/img/tooltip-warning.png" title="Warning" /></div>
+//
+// Styleguide 7.6
+
+// Filter
+//
+// <strong>Invalidate components</strong> use border-color: <strong>#e9322d</strong>
+//
+// markup:
+// <select class="error"></select>
+//
+// Styleguide 7.7
+
+$filter-error-border-color: #e9322d;
+
+.error {
+    border: 1px solid $filter-error-border-color;
+}

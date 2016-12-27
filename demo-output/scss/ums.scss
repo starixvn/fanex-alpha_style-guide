@@ -1,0 +1,65 @@
+
+// Under Maintenance page
+//
+// markup:
+// <div class="page-UM">
+//     <h1 class="title"><span class="icon-alert"></span>Under Maintenance</h1>
+//     <h2 class="sub-title">Dear Valued Customers:</h2>
+//     <p>We are having server maintenance, website will be unavailable from <br />
+//         HK time <span class="txt-red">12:30PM until 14:00PM</span>(GMT+ 8). Sorry for the inconvenience caused.</p>
+//     <h2 class="sub-title second">尊敬的客戶:</h2>
+//     <p>
+//         本公司將於香港時間<span class="txt-red">12:30PM 至 14:00PM</span>(GMT +8) 對服務器進行維護，期間所有的網頁將無法登入，不便之處，敬請諒解
+//     </p>
+// </div>
+//
+// Styleguide 6.3
+
+// styleguide:ignore:start
+.page-UM {
+    color: #333;
+    font-family: $font-family;
+    font-size: $font-size;
+    line-height: 2;
+}
+
+.title {
+    padding-bottom: 6px;
+}
+
+.sub-title {
+    font-weight: bold;
+}
+
+// styleguide:ignore:end
+
+.page-UM {
+    .title {
+        color: #e94201;
+        font-weight: bold;
+        font-size: 22px;
+        border-bottom: 1px solid #cfd7e0;
+        margin: 0;
+
+        .icon-alert {
+            margin-right: 6px;
+            font-size: 40px;
+            position: relative;
+            top: 8px;
+        }
+    }
+
+    .sub-title {
+        font-size: 14px;
+        margin-top: 16px;
+
+        &.second {
+            margin-top: 50px;
+        }
+    }
+
+    .txt-red {
+        color: #b00000;
+    }
+}
+

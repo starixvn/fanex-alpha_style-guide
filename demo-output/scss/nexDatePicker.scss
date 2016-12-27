@@ -1,0 +1,82 @@
+// NexDatePicker
+//
+// The <strong>NexDatePicker</strong> plugin supports users to choose time range quickly.
+// <h4 class="guide-title">How to use</h4>
+// <p>If you want to apply this style, please use these following files:
+// <ul>
+//     <li>Create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and <br> copy only necessary CSS codes for calendar from this file "<strong>styles/vendors/bootstrap.scss</strong>"</li>
+//     <li>Use these files "<strong>styles/vendors/bootstrap-datetimepicker.css</strong>", "<strong>styles/components/calendars.css</strong>" and "<strong>styles/components/bootstrap.nexDatePicker.css</strong>" (which is appropriately customized for this current style)</li>
+// </ul>
+// <p><strong>For example</strong></p> 
+// <ul class="list-unstyled">
+//     <li>styles/vendors-extensions/<strong>site-main</strong>/bootstrap-ex.scss</li>
+//     <li>styles/<strong>vendors</strong>/bootstrap-datetimepicker.css</li>
+//     <li>styles/components/<strong>calendars.css</strong></li>
+//     <li>styles/components/<strong>bootstrap.nexDatePicker.css</strong></li>
+//     <li><strong>---For javascipt---</strong></li>
+//     <li>js/<strong>libs</strong>/moment/moment.js</li>
+//     <li>js/components/<strong>datetimepicker</strong>/datepicker.js</li>
+//     <li>js/components/<strong>datetimepicker</strong>/bootstrap-datetimepicker.js</li>
+//     <li>js/components/<strong>bootstrap.nexDatePicker</strong>/bootstrap.nexDatePicker.js</li>
+// </ul>
+//
+// markup:
+// <div sg-demo-nex-date-picker >
+//     <form class="form-inline filter demo-nexdatepicker" role="form" id="filter">
+//         <div class="form-group nexDatePicker">
+//             <div class="currentreport-item">
+//                 <div id="daterange-picker"></div>
+//             </div>
+//         </div>
+//         <div class="form-group">
+//             <input type="button" value="Submit" class="btn btn-submit" />
+//         </div>
+//     </form>
+// </div>
+//
+// sg-angular-directive:
+// name: sgDemoNexDatePicker
+// file: js/styleguide/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js
+// file: js/styleguide/demoNexDatePicker.js
+//
+// Styleguide 5.2
+/* File Created: November 14, 2012 */
+
+// styleguide:ignore:start
+.demo-nexdatepicker {
+    display: table;
+    margin-bottom: 300px;
+}
+// styleguide:ignore:end 
+
+.filter .form-group.nexDatePicker {
+    margin-right: 0;
+}
+
+.ui_nexdatepicker {
+    float: left;
+    width: 100%;
+}
+
+.ui_nexdatepicker_datetextbox {
+    cursor: pointer;
+    padding: 2px 6px;
+    width: 90px !important;
+}
+
+.ui_nexdatepicker_lbl_field {
+    float: left;
+    text-align: right;
+    margin: 0;
+    padding: 5px 6px 5px 0px;
+}
+
+.ui_nexdatepicker_edit_field {
+    float: left;
+    margin: 0 16px 0 0;
+}
+
+.ui_nexdatepicker_edit_field select {
+    cursor: pointer;
+}
+

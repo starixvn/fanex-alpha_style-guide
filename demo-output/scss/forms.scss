@@ -1,0 +1,447 @@
+// Forms
+//
+// Styleguide 2.0
+
+// Basic form
+//
+// Styleguide 2.1
+
+// Basic form
+//
+// Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to width: 100%; by default.<br> Wrap labels and controls in <code>.form-group</code> for optimum spacing.
+// <h4 class="guide-title">How to use</h4>
+// <p>If you want to use this style, please see the following instruction:
+// <ol>
+//     <li>Create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and <br> copy only necessary CSS codes for forms from this file "<strong>styles/vendors/bootstrap.scss</strong>"</li>
+//     <li>Use these file "<strong>styles/components/buttons.css</strong>", "<strong>styles/components/textboxes.css</strong>", "<strong>styles/components/checkbox-radio.css</strong>" and "<strong>styles/components/form.css</strong>" (were appropriately customized for the current style).</li>
+// </ol> 
+// <p><strong>For example:</strong></p> 
+// <ul>
+//     <li>styles/<strong>vendors-extensions</strong>/<strong>site-main</strong>/bootstrap-ex.css</li>
+//     <li>styles/<strong>components</strong>/buttons.css</li>
+//     <li>styles/<strong>components</strong>/textboxes.css</li>
+//     <li>styles/<strong>components</strong>/checkbox-radio.css</li>
+//     <li>styles/<strong>components</strong>/form.css</li>
+// </ul>
+//
+// markup:
+//     <div class="block" id="container">
+//         <form class="form" id="pwdForm">
+//             <div class="form-group">
+//                 <label>Old Password</label>
+//                 <input type="password" class="txt form-control" name="txtOldPwd" id="txtOldPwd" autocomplete="off" maxlength="16" />
+//             </div>
+//             <div class="form-group">
+//                 <label>New Password</label>
+//                 <input type="password" class="txt form-control" name="txtNewPwd" id="txtNewPwd" autocomplete="off" maxlength="16" />
+//             </div>
+//             <div class="form-group">
+//                 <label>Confirm Password</label>
+//                 <input type="password" class="txt form-control" name="txtConfirmPwd" id="txtConfirmPwd" autocomplete="off" maxlength="16" />
+//             </div>
+//             <div class="form-group">
+//                 <label><input type="checkbox" id="showPasswordchk" /> Show password</label>
+//             </div>
+//             <div class="form-group">
+//                 <input type="submit" class="btn-submit" value="Submit" />  
+//                 <input type="reset" value="Reset" />  
+//             </div>
+//         </form>
+//     </div>
+//
+// Styleguide 2.1.1
+
+// styleguide:ignore:start
+
+.form {
+    max-width: 400px;
+}
+
+// styleguide:ignore:end
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-control:focus {
+    @include effect-textbox;
+}
+
+
+// Horizontal form
+//
+// Use Bootstrap's predefined grid classes to align labels and groups of form controls in a horizontal layout by adding <code>.form-horizontal</code> to the form (which doesn't have to be a <code>&lt;form&gt;</code>). Doing so changes <code>.form-groups</code> to behave as grid rows, so no need for <code>.row</code>.
+// <h4 class="guide-title">How to use</h4>
+// <p>If you want to use this style, please see the following instruction:
+// <ol>
+//     <li>Create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and <br> copy only necessary CSS codes for forms from this file "<strong>styles/vendors/bootstrap.scss</strong>"</li>
+//     <li>Use these file "<strong>styles/components/buttons.css</strong>", "<strong>styles/components/textboxes.css</strong>", "<strong>styles/components/checkbox-radio.css</strong>" and "<strong>styles/components/form.css</strong>" (were appropriately customized for the current style).</li>
+// </ol> 
+// <p><strong>For example:</strong></p> 
+// <ul>
+//     <li>styles/<strong>vendors-extensions</strong>/<strong>site-main</strong>/bootstrap-ex.css</li>
+//     <li>styles/<strong>components</strong>/buttons.css</li>
+//     <li>styles/<strong>components</strong>/textboxes.css</li>
+//     <li>styles/<strong>components</strong>/checkbox-radio.css</li>
+//     <li>styles/<strong>components</strong>/form.css</li>
+// </ul>
+//
+// markup:
+//    <form class="form-horizontal form">
+//       <div class="form-group">
+//           <label class="col-lg-2 control-label">Email</label>
+//           <div class="col-lg-10"><input type="email" placeholder="Email" class="form-control" /></div>
+//       </div>
+//       <div class="form-group">
+//           <label class="col-lg-2 control-label">Password</label>
+//           <div class="col-lg-10"><input type="password" placeholder="Password" class="form-control" /></div>
+//       </div>
+//       <div class="form-group">
+//          <div class="col-lg-offset-2 col-lg-10">
+//            <button class="btn-submit" type="submit">Sign in</button>
+//          </div>
+//       </div>
+//     </form>
+//
+// Styleguide 2.1.2
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-control:focus {
+    @include effect-textbox;
+}
+
+// Inline form
+//
+// Use Bootstrap's predefined grid classes to align labels and groups of form controls in a horizontal layout by adding <code>.form-horizontal</code> to the form (which doesn't have to be a <code>&lt;form&gt;</code>). Doing so changes <code>.form-groups</code> to behave as grid rows, so no need for <code>.row</code>.
+// <h4 class="guide-title">How to use</h4>
+// <p>If you want to use this style, please create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and <br> copy only necessary CSS codes for forms from this file "<strong>styles/vendors/bootstrap.scss</strong>"
+//  <p><strong>For example:</strong></p> 
+//  <ul>
+//      <li>styles/vendors-extensions/<strong>site-main</strong>/bootstrap-ex.scss</li>
+//      <li>styles/<strong>components</strong>/form.scss</li>
+//  </ul> 
+// 
+// markup:
+// <form class="form-inline demo-form-inline filter" role="form">
+//    <div class="form-group">
+//        <select id="IsLive">
+//             <option value="0" selected="selected">Live</option>
+//             <option value="1">Non-Live</option>
+//        </select>
+//    </div>
+//    <div class="form-group">
+//        <label>League</label>
+//        <select id="ddlMatch">
+//             <option value="1">NEW ZEALAND CENTRAL LEAGUE</option>
+//             <option value="2">TESTING (Betting Prohibited Area!!) - SOCCER</option>
+//         </select>
+//    </div>
+//    <div class="form-group last-filter">
+//        <label>Event</label>
+//        <select id="ddlMatch">
+//             <option value="1">Western Suburbs - Lower Hutt City</option>
+//         </select>
+//    </div>
+//    <div class="form-group">
+//        <input type="button" class="btn-submit" id="btnSubmit" value="Submit" />
+//        <span class="dropdown">
+//            <button class="btn btn-default btn-countdown dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+//                <span class="icon-refresh"></span>
+//                <span id="ddlRefresh">30</span>
+//                <span class="caret"></span>
+//            </button>
+//            <ul class="dropdown-menu" id="refresh-value" aria-labelledby="dropdownMenu2">
+//                <li><a href="javascript:void(0);" data-refresh-value="30">30</a></li>
+//                <li><a href="javascript:void(0);" data-refresh-value="45">45</a></li>
+//                <li><a href="javascript:void(0);" data-refresh-value="60">60</a></li>
+//            </ul>
+//        </span>
+//    </div>
+// </form>
+//
+// Styleguide 2.1.3
+
+// styleguide:ignore:start
+.demo-form-inline {
+    margin: 20px 0 100px;
+} 
+// styleguide:ignore:end
+
+.filter {
+  padding-top: 15px;
+  position: relative; 
+    .form-group {
+        display: inline-block;
+        margin: 0 16px 15px 0;
+        label {
+            font-weight: normal;
+            margin-right: 5px; 
+        }
+    }
+}
+
+.form-inline {
+    .dropdown {
+        display: inline-block;
+
+        .caret {
+            top: 13px;
+            right: 17px;
+            position: absolute;
+        }
+
+        .dropdown-menu {
+            border-color: $dropdown-border;
+            min-width: 78px;
+            @include effect-normal;
+        }
+
+        .dropdown-toggle {
+            padding-right: 30px;
+        }
+
+        .btn-default:active, .btn-default.active, &.open>.btn-default.dropdown-toggle {
+            color: $dropdown-color;
+        }
+
+        .btn.btn-countdown {
+            background-color: #eee;
+            color: #212121;
+            padding: 6px 30px 6px 10px;
+            font-size: 13px;
+
+            &:hover {
+                background-color: #e1e1e1;
+            }
+
+            .icon-refresh:before {
+                content: '\e933';
+                font-family: 'Iconalpha';
+                font-size: 20px;
+                position: relative;
+                color: #212121;
+                left: -4px;
+                top: -2px;
+            }
+
+            #ddlRefresh {
+                position: relative;
+                top: -6px;
+            }
+        }
+
+        #refresh-value {
+            padding: 0;
+            border-radius: 0;
+
+            > li {
+                > a {
+                    padding: 5px 32px;
+                    font-size: 12px;
+                }
+
+                a:hover {
+                    color: $dropdown-color;
+                    background: $dropdown-bg-hover;
+                }
+            }
+        }
+    }
+}
+
+// Multiple rows filter
+//
+// <p>If you want to use this style, please create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and <br> copy only necessary CSS codes for forms from this file "<strong>styles/vendors/bootstrap.scss</strong>"
+//       <p><strong>For example:</strong></p> 
+//       <ul>
+//            <li>styles/vendors-extensions/<strong>site-main</strong>/bootstrap-ex.scss</li>
+//            <li>styles/<strong>components</strong>/form.scss</li>
+//       </ul> 
+//   </li>
+// </ul>
+//
+// markup:
+// <form class="filter">
+//    <div class="col-sm-12">
+//         <div class="form-group">
+//             <label class="txt">Date</label>
+//             <div class="control date">
+//                 <div class="input-group date" id="dpkContainer">
+//                     <input class="form-control text-box single-line" data-val="true" data-val-date="The field ResultDate must be a date." data-val-required="The ResultDate field is required." id="ResultDate" name="ResultDate" readonly="readonly" type="datetime" value="07/03/2016">
+//                     <span class="input-group-addon">
+//                         <span class="icon-calendar"></span>
+//                     </span>
+//                 </div>
+//             </div>
+//         </div>
+//         <div class="form-group">
+//             <input type="submit" value="Submit" id="selected-day-results" class="btn btn-submit" />
+//             <input type="submit" value="07/12/2016" id="today-results" class="btn btn-default btn-other-day" />
+//             <input type="submit" value="07/11/2016" id="yesterday-results" class="btn btn-default btn-other-day" />
+//         </div>
+//     </div>
+//     <div class="col-sm-12">
+//         <span class="txt-red">*</span> You can view the report data from 07/02/2016.
+//     </div>
+//     <div class="col-sm-12 sport-info">
+//         <div class="form-group">
+//             <label class="txt">Sport</label>
+//             <select>
+//                 <option value="2">Basketball</option>
+//                 <option value="5">Tennis</option>
+//                 <option value="6">Volleyball</option>
+//             </select>
+//         </div>
+//         <div class="form-group">
+//             <label class="txt">League</label>
+//             <select>
+//                 <option value="7621">AUSTRALIA BRISBANE PREMIER LEAGUE</option>
+//                 <option value="11779">AUSTRALIA BRISBANE PREMIER LEAGUE RESERVE</option>
+//                 <option value="13470">AUSTRALIA CAPITAL TERRITORY PREMIER LEAGUE</option>
+//             </select>
+//         </div>
+//     </div>
+// </form>
+//
+// Styleguide 2.1.4
+
+.filter {
+    [class^="col-"] {
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+         .control {
+            display: inline-block;
+            width: 200px;
+            vertical-align: middle;
+            margin: 0 8px 0 5px;
+
+            &.date {
+                width: 130px;
+            }
+        }    
+    }
+
+    .txt-red {
+        color: #f00;
+    }
+}
+
+.input-group.date {
+    position: initial;
+
+    .icon-calendar {
+        font-size: 24px;
+        color: #7f7f7f;
+    }
+
+    .input-group-addon {
+        background: transparent;
+        border: none;
+        padding: 0px 8px;
+        position: relative;
+        top: 3px;
+    }
+
+    .form-control {        
+        border: none;
+        font-size: 12px;
+        height: 28px;
+        background: #fff;
+        margin-left: 0;
+        @include effect-textbox;
+    }
+}
+
+// Form validation
+//
+// <h4 class="guide-title">How to use</h4>
+// <p>If you want to use this style, please see the following instruction:
+// <ol>
+//     <li>Create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and <br> copy only necessary CSS codes for forms from this file "<strong>styles/vendors/bootstrap.scss</strong>"</li>
+//     <li>Use these file "<strong>styles/components/buttons.css</strong>", "<strong>styles/components/textboxes.css</strong>", "<strong>styles/components/checkbox-radio.css</strong>" and "<strong>styles/components/form.css</strong>" (were appropriately customized for the current style).</li>
+// </ol> 
+// <p><strong>For example:</strong></p> 
+// <ul>
+//     <li>styles/<strong>vendors-extensions</strong>/<strong>site-main</strong>/bootstrap-ex.css</li>
+//     <li>styles/<strong>components</strong>/buttons.css</li>
+//     <li>styles/<strong>components</strong>/textboxes.css</li>
+//     <li>styles/<strong>components</strong>/checkbox-radio.css</li>
+//     <li>styles/<strong>components</strong>/form.css</li>
+// </ul>
+//
+// markup:
+//    <form role="form" class="form form-validation">
+//       <div class="form-group">
+//            <label>Email</label>
+//            <input type="email" placeholder="Enter email" class="form-control txt error" />
+//            <i class="validation"></i>
+//        </div>
+//        <div class="form-group">
+//            <label>Password</label>
+//            <input type="password" placeholder="Password" class="form-control txt valid" />
+//            <i class="validation"></i>
+//        </div>
+//        <div class="form-group">
+//            <button class="btn-submit" type="submit">Log in</button>
+//        </div>
+//    </form>
+//
+// Styleguide 2.2
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-control:focus {
+    @include effect-textbox;
+}
+
+$msg-error-bg: #fadddd;
+$msg-error-color: #fe0000;
+$msg-error-border: #ef2d2d;
+
+$msg-success-bg: #eefbe9;
+$msg-success-color: #52a220;
+$msg-success-border: #1db51a;
+
+.form-validation {
+    %alphaIcon {
+        font:{
+            family: 'Iconalpha';
+            style: normal;
+        }
+    }
+
+    .form-group {
+        position: relative;
+    }
+
+    .txt {
+        &.error ~ .validation, &.valid ~ .validation {
+            @extend %alphaIcon;
+            font-size: 18px;
+            right: 8px;
+            top: 25px;
+            position: absolute;
+        }
+
+        &.error {
+            ~ .validation:before {     
+                content: '\e92c';
+                color: $msg-error-color;
+            }
+        }
+
+        &.valid {
+            ~ .validation:before {
+                content: '\e91f';
+                color: $msg-success-color;
+            }
+        }
+    }
+}

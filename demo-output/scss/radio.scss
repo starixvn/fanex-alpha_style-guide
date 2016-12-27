@@ -1,0 +1,202 @@
+// Checkboxes and radio
+//
+// markup:
+// <h4>Checkbox</h4>
+// <div class="checkbox">
+//    <label>
+//        <input name="myoption" type="checkbox" value="0" checked />
+//        <span class="checkbox-material"><span class="check"></span></span>
+//        Option one is this
+//    </label>
+//   </div>
+// <div class="checkbox">
+//    <label>
+//        <input name="myoption" type="checkbox" value="1" />
+//        <span class="checkbox-material"><span class="check"></span></span>
+//        Option two can be something else
+//    </label>
+//   </div>
+// <div class="checkbox">
+//    <label>
+//        <input name="myoption" type="checkbox" value="2" disabled />
+//        <span class="checkbox-material"><span class="check"></span></span>
+//        Option three is disabled
+//    </label>
+//   </div>
+// <h4>Radio button</h4>
+// <div class="radio">
+//    <label>
+//        <input name="myoption" type="radio" value="0" checked />
+//        <span class="circle"></span>
+//        <span class="check"></span>
+//        Option one is this
+//    </label>
+// </div>
+// <div class="radio">
+//    <label>
+//        <input name="myoption" type="radio" value="1" />
+//        <span class="circle"></span>
+//        <span class="check"></span>
+//        Option two can be something else
+//    </label>
+// </div>
+// <div class="radio">
+//    <label>
+//        <input name="myoption" type="radio" value="2"  disabled/>
+//        <span class="circle"></span>
+//        <span class="check"></span>
+//        Option three is disabled
+//    </label>
+// </div>
+//
+// Styleguide 1.5
+
+input[type="radio"], input[type="checkbox"] {
+    margin: 0;
+    position: relative;
+    top: 2px;
+}
+
+input[type=checkbox].disabled, input[type=checkbox]:disabled,
+input[type=radio].disabled, input[type=radio]:disabled {
+    cursor: not-allowed;
+}
+
+label[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Customize checkbox */
+
+.checkbox label, .radio label, label {
+    font-size: $font-size;
+    color: $text-color;
+}
+
+.checkbox .checkbox-material:before,
+label.checkbox-inline .checkbox-material:before {
+    left: -2px;
+    top: -6px;
+    -webkit-transform: scale3d(1.6, 1.6, 1);
+    transform: scale3d(1.6, 1.6, 1);
+}
+
+.checkbox .checkbox-material .check:before {
+    color: $super-level-color;
+}
+
+.checkbox .checkbox-material, label.checkbox-inline .checkbox-material {
+    margin-right: 4px;
+    .check {
+        width: 16px;
+        height: 16px;
+        &:before {
+            margin-top: -7px;
+            margin-left: 5px;
+        }
+    }
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox-material .check,
+label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check {
+    color: $super-level-color;
+    border-color: $super-level-color;
+    &:before {
+        color: $super-level-color;    
+        @include box-shadow-multiple('0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px -12px 0 11px');
+    }
+}
+
+/* Radio button */
+.radio label {
+    padding-left: 24px;
+}
+
+.radio span, label.radio-inline span {
+    left: 2px;
+}
+
+.radio input[type=radio]:checked ~ .circle, label.radio-inline input[type=radio]:checked ~ .circle {
+    border-color: $super-level-color;    
+}
+
+.radio input[type=radio]:checked ~ .check, label.radio-inline input[type=radio]:checked ~ .check {
+    background-color: $super-level-color;
+    -webkit-transform: scale3d(0.4, 0.4, 1);
+    transform: scale3d(0.4, 0.4, 1);
+}
+
+@include keyframes(checkbox-on) {
+    0% {
+        @include box-shadow-multiple('0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px -12px 0 11px');
+    }
+    50% {
+        @include box-shadow-multiple('0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px -12px 0 11px');
+    }
+    100% {
+        @include box-shadow-multiple('0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px -12px 0 11px');
+    }
+}
+
+@include keyframes(checkbox-off) {
+    0% {
+        @include box-shadow-multiple('0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset');
+    }
+    25% {
+        @include box-shadow-multiple('0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset');
+    }
+    50% {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        margin-top: -4px;
+        margin-left: 6px;
+        width: 0;
+        height: 0;
+        @include box-shadow-multiple('0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset');
+    }
+    51% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        margin-top: -2px;
+        margin-left: -2px;
+        width: 20px;
+        height: 20px;
+        -webkit-box-shadow: 0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0px 0 0 10px inset;
+                box-shadow: 0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0px 0 0 10px inset;
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        margin-top: -2px;
+        margin-left: -2px;
+        width: 20px;
+        height: 20px;
+        -webkit-box-shadow: 0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0px 0 0 0 inset;
+                box-shadow: 0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0 0 0 0,
+          0px 0 0 0 inset;
+    }
+}

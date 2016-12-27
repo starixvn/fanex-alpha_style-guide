@@ -1,0 +1,400 @@
+﻿// Checkboxes and radios
+//
+// Styleguide 1.5
+
+// Basic
+// 
+// <p>You can add the <code>disabled</code> attribute to disable it.</p>
+// <h4 class="guide-title">How to use</h4>
+// <p>If you want to apply this style, please use this file "<strong>styles/components/checkbox-radio.css</strong>"</p>
+//
+// markup:    
+// <h4>Checkbox</h4>
+// <ul class="list-unstyled">
+//     <li><label><input name="myoption" type="checkbox" value="0" checked /> Option one is this</label></li>
+//     <li><label><input name="myoption" type="checkbox" value="1" /> Option two can be something else</label></li>
+//     <li><label disabled><input name="myoption" type="checkbox" value="2" disabled /> Option three is disabled</label></li>
+// </ul>
+// <h4>Radio button</h4>
+// <ul class="list-unstyled">
+//     <li><label><input name="myoption1" type="radio" value="0" checked /> Option one is this</label></li>
+//     <li><label><input name="myoption1" type="radio" value="1" /> Option two can be something else</label></li>
+//     <li><label disabled><input name="myoption1" type="radio" value="2" disabled /> Option three is disabled</label></li>
+// </ul>
+//
+// Styleguide 1.5.1
+
+input[type="radio"], input[type="checkbox"] {
+    margin: 0;
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+input[type=checkbox].disabled, input[type=checkbox]:disabled,
+input[type=radio].disabled, input[type=radio]:disabled {
+    cursor: not-allowed;
+}
+
+label[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+
+// Advanced
+//
+// Using <a href="http://fezvrasta.github.io/bootstrap-material-design/" target="_blank">bootstrap-material-design</a> library for checkboxes and radio buttons if you want to apply more color and ripple effects
+// <h4 class="guide-title">How to use</h4>
+//
+// If you want to use this style, please use these following files:
+// <ul>
+//     <li>Create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and <br> copy only necessary CSS codes for checkboxes and radios from this file "<strong>styles/vendors/bootstrap-material/bootstrap-material-design.scss</strong>"</li>
+//     <li>Add more file "<strong>styles/components/checkbox-radio-material.css</strong>"</li>
+// </ul>
+// The colors of these checkboxes and radio buttons follow the main color of each level. Please use one of these files:
+// <ul>
+//     <li>styles/<strong>themes</strong>/components/checkbox-radio-material/<strong>checkbox-radio-material-super.css</strong></li>
+//     <li>styles/<strong>themes</strong>/components/checkbox-radio-material/<strong>checkbox-radio-material-master.css</strong></li>
+//     <li>styles/<strong>themes</strong>/components/checkbox-radio-material/<strong>checkbox-radio-material-agent.css</strong></li>
+// </ul>
+// <p><strong>For example:</strong></p>
+// <ul class="list-unstyled">
+//     <li>styles/vendors-extensions/<strong>site-main</strong>/bootstrap-material-ex.scss</li>
+//     <li>styles/<strong>components</strong>/checkbox-radio.css</li>
+//     <li><strong>--- For javascript ---</strong></li>
+//     <li>js/<strong>libs</strong>/<strong>bootstrap-material</strong>/material.js</li>
+//     <li>js/<strong>libs</strong>/<strong>bootstrap-material</strong>/ripples.js</li>
+// </ul>
+//
+// markup:
+// <div ng-controller="sgCheckboxRadio">
+//    <h4>Checkbox</h4>
+//     <div class="super">
+//         <div class="checkbox">
+//             <label>
+//                 <input name="myoption" type="checkbox" value="0" checked />
+//                 Option one is this
+//             </label>
+//         </div>
+//         <div class="checkbox">
+//             <label>
+//                 <input name="myoption" type="checkbox" value="1" />
+//                 Option two can be something else
+//             </label>
+//         </div>
+//         <div class="checkbox">
+//             <label>
+//                 <input name="myoption" type="checkbox" value="2" disabled />
+//                 Option three is disabled
+//             </label>
+//         </div>
+//     </div>
+//     <div class="master">
+//         <div class="checkbox">
+//             <label>
+//                 <input name="myoption" type="checkbox" value="0" checked />
+//                 Option one is this
+//             </label>
+//         </div>
+//         <div class="checkbox">
+//             <label>
+//                 <input name="myoption" type="checkbox" value="1" />
+//                 Option two can be something else
+//             </label>
+//         </div>
+//         <div class="checkbox">
+//             <label>
+//                 <input name="myoption" type="checkbox" value="2" disabled />
+//                 Option three is disabled
+//             </label>
+//         </div>
+//     </div>
+//     <div class="agent">
+//         <div class="checkbox">
+//             <label>
+//                 <input name="myoption" type="checkbox" value="0" checked />
+//                 Option one is this
+//             </label>
+//         </div>
+//         <div class="checkbox">
+//             <label>
+//                 <input name="myoption" type="checkbox" value="1" />
+//                 Option two can be something else
+//             </label>
+//         </div>
+//         <div class="checkbox">
+//             <label>
+//                 <input name="myoption" type="checkbox" value="2" disabled />
+//                 Option three is disabled
+//             </label>
+//         </div>
+//     </div>
+//     <h4>Radio button</h4>
+//     <div class="super">
+//         <div class="radio">
+//             <label>
+//                 <input name="myoption1" type="radio" value="0" checked />
+//                 Option one is this
+//             </label>
+//         </div>
+//         <div class="radio">
+//             <label>
+//                 <input name="myoption1" type="radio" value="0" />
+//                 Option two can be something else
+//             </label>
+//         </div>
+//         <div class="radio">
+//             <label>
+//                 <input name="myoption1" type="radio" value="0" disabled />
+//                 Option three is disabled
+//             </label>
+//         </div>
+//     </div>
+//     <div class="master">
+//         <div class="radio">
+//             <label>
+//                 <input name="myoption2" type="radio" value="0" checked />
+//                 Option one is this
+//             </label>
+//         </div>
+//         <div class="radio">
+//             <label>
+//                 <input name="myoption2" type="radio" value="0" />
+//                 Option two can be something else
+//             </label>
+//         </div>
+//         <div class="radio">
+//             <label>
+//                 <input name="myoption2" type="radio" value="0" disabled />
+//                 Option three is disabled
+//             </label>
+//         </div>
+//     </div>
+//     <div class="agent">
+//         <div class="radio">
+//             <label>
+//                 <input name="myoption3" type="radio" value="0" checked />
+//                 Option one is this
+//             </label>
+//         </div>
+//         <div class="radio">
+//             <label>
+//                 <input name="myoption3" type="radio" value="0" />
+//                 Option two can be something else
+//             </label>
+//         </div>
+//         <div class="radio">
+//             <label>
+//                 <input name="myoption3" type="radio" value="0" disabled />
+//                 Option three is disabled
+//             </label>
+//         </div>
+//     </div>
+// </div>
+//
+// sg-angular-directive:
+// name: sgCheckboxRadio
+// file: js/styleguide/checkboxradio.js
+// file: js/styleguide/components/bootstrap-material-design/ripples.js
+// file: js/styleguide/components/bootstrap-material-design/material.js
+//
+// Styleguide 1.5.2
+
+/* Customize checkbox */
+.checkbox {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.checkbox + .checkbox {
+    margin-top: 0;
+}
+
+.checkbox .checkbox-material {
+    top: 2px;
+}
+
+.checkbox label, .radio label, label {
+    font-size: $font-size;
+    color: $text-color;
+}
+
+.checkbox .checkbox-material:before,
+label.checkbox-inline .checkbox-material:before {
+    left: -2px;
+    top: -6px;
+    -webkit-transform: scale3d(1.5, 1.5, 1);
+    transform: scale3d(1.5, 1.5, 1);
+}
+
+.checkbox .checkbox-material, label.checkbox-inline .checkbox-material {
+    margin-right: 4px;
+    .check {
+        width: 16px;
+        height: 16px;
+        &:before {
+            margin-top: -7px;
+            margin-left: 5px;
+        }
+    }
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox-material .check,
+label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check {
+    &:before {   
+        @include box-shadow-multiple('0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px -12px 0 11px');
+    }
+}
+
+.form-group.is-focused {
+    .checkbox label, .radio label {
+        color: $text-color;
+
+        &:hover, &:focus {
+              color: $text-color;
+        }
+    }
+}
+
+@include keyframes(checkbox-on) {
+    0% {
+        @include box-shadow-multiple('0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px 2px 0 11px');
+    }
+    50% {
+        @include box-shadow-multiple('0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px 2px 0 11px');
+    }
+    100% {
+        @include box-shadow-multiple('0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px -12px 0 11px');
+    }
+}
+
+@include keyframes(checkbox-off) {
+    0% {
+        @include box-shadow-multiple('0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset');
+    }
+    25% {
+        @include box-shadow-multiple('0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px -12px 0 11px, 0 0 0 0 inset');
+    }
+    50% {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        margin-top: -7px;
+        margin-left: 5px;
+        width: 0;
+        height: 0;
+        @include box-shadow-multiple('0 0 0 10px, 10px -6px 0 9px, 32px 0 0 20px, 0 32px 0 20px, -3px 5px 0 10px, 20px 2px 0 11px, 0 0 0 0 inset');
+    }
+    51% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        margin-top: -2px;
+        margin-left: -2px;
+        width: 16px;
+        height: 16px;
+        @include box-shadow-multiple('0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 10px inset');
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        margin-top: -2px;
+        margin-left: -2px;
+        width: 16px;
+        height: 16px;
+        @include box-shadow-multiple('0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0,0 0 0 0 inset');
+    }
+}
+
+/* Radio button */
+.radio label {
+    padding-left: 24px;
+}
+
+.radio label span, label.radio-inline span {
+    left: 2px;
+    top: 1px;
+}
+
+.radio input[type=radio]:checked ~ .check, label.radio-inline input[type=radio]:checked ~ .check {
+    -webkit-transform: scale3d(0.35, 0.35, 1);
+    transform: scale3d(0.35, 0.35, 1);
+}
+
+.super {
+    /* Customize checkbox */
+    .checkbox .checkbox-material .check:before {
+        color: #67151b;
+    }
+
+    .checkbox input[type=checkbox]:checked + .checkbox-material .check,
+    label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check {
+        color: #67151b;
+        border-color: #67151b;
+        &:before {
+            color: #67151b; 
+        }
+    }
+
+    /* Radio button */
+
+    .radio input[type=radio]:checked ~ .circle, label.radio-inline input[type=radio]:checked ~ .circle {
+        border-color: #67151b;    
+    }
+
+    .radio input[type=radio]:checked ~ .check, label.radio-inline input[type=radio]:checked ~ .check {
+        background-color: #67151b;
+    }
+}
+
+.master {
+    /* Customize checkbox */
+    .checkbox .checkbox-material .check:before {
+        color: #276443;
+    }
+
+    .checkbox input[type=checkbox]:checked + .checkbox-material .check,
+    label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check {
+        color: #276443;
+        border-color: #276443;
+        &:before {
+            color: #276443; 
+        }
+    }
+
+    /* Radio button */
+
+    .radio input[type=radio]:checked ~ .circle, label.radio-inline input[type=radio]:checked ~ .circle {
+        border-color: #276443;    
+    }
+
+    .radio input[type=radio]:checked ~ .check, label.radio-inline input[type=radio]:checked ~ .check {
+        background-color: #276443;
+    }
+}
+
+.agent {
+    /* Customize checkbox */
+    .checkbox .checkbox-material .check:before {
+        color: #516e8f;
+    }
+
+    .checkbox input[type=checkbox]:checked + .checkbox-material .check,
+    label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check {
+        color: #516e8f;
+        border-color: #516e8f;
+        &:before {
+            color: #516e8f; 
+        }
+    }
+
+    /* Radio button */
+
+    .radio input[type=radio]:checked ~ .circle, label.radio-inline input[type=radio]:checked ~ .circle {
+        border-color: #516e8f;    
+    }
+
+    .radio input[type=radio]:checked ~ .check, label.radio-inline input[type=radio]:checked ~ .check {
+        background-color: #516e8f;
+    }
+}

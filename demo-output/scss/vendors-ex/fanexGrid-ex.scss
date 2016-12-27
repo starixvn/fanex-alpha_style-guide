@@ -1,0 +1,281 @@
+// Fanex.Grid
+//
+// <p>Using <strong>Fanex.Grid</strong>(http://10.18.200.209:8827) for complicated table, Fanex.Grid supports these features:</p>
+// <ol>
+//    <li>Fixed Header and Footer</li>
+//    <li>Multi-level column group header with colspan and rowspan</li>
+//    <li>Frozen Columns</li>
+//    <li>Custom cells formatting and rendering</li>
+//    <li>Work across browsers</li>
+//    <li>Sorting</li>
+//    <li>Paging</li>
+//    <li>Configurable and customizable</li>
+//    <li>Grouping</li>
+//    <li>Title</li>
+//    <li>Show/Hide Column</li>
+//    <li>Multiple Language</li>
+//    <li>Virtual Rendering</li>
+// </ol>
+// <p>If you want to apply this style, please use these following files:</p>
+// <ul class="list-unstyled">
+//    <li>styles/<strong>vendors</strong>/FanexGrid/<strong>Fanex.Grid.css</strong></li>
+//    <li>styles/<strong>vendors</strong>/FanexGrid/<strong>Fanex.Pagination.css</strong></li>
+//    <li>styles/<strong>components</strong>/fanex-grid.css</li>
+//    <li>styles/<strong>components</strong>/fanex-pagination.css</li>
+//    <li><strong>--- For javascript ---</strong></li>
+//    <li><strong>js</strong>/components/<strong>FanexGrid</strong>/Fanex.Grid.js</li>
+//    <li><strong>js</strong>/components/<strong>FanexGrid</strong>/Fanex.Pagination.js</li>
+// </ul>
+//
+// markup:
+// <div class="grid-container" sg-fanexgrid>
+//     <div id="gridId" class="freegrid"></div>
+// </div>
+//
+// sg-angular-directive:
+// name: sgFanexgrid
+// file: js/styleguide/customizeFanexGrid.js
+// 
+//
+// Styleguide 3.3
+
+.freegrid .grid-container.container {
+    padding: 0;
+}
+
+.freegrid {
+    * {
+        @include box-sizing(content-box);
+    }
+
+    .no-data-frozen, .no-data-not-frozen {
+        color: $text-color;
+        font-weight: normal;
+    }
+
+    .free-top-left table thead th, .col_header table thead th {
+        background: $table-header-bg-color;
+        color: $table-header-color;
+        font-size: $font-size;
+        font-weight: 400 !important;
+        border-color: #dfdfdf;
+        text-align: center;
+    }
+
+    .col_footer table thead th {
+        background: $table-footer-bg !important;
+        color: $table-footer-color;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    tr.highlight-row:hover td {
+        background-color: $table-td-hover-color;
+    }
+
+    .mousehoverbeyond td {
+        background-color: $table-td-hover-color !important;
+    }
+
+    td.group-odd, td.group-odd:hover {
+        background-color: $table-odd-bg !important;
+    }
+
+    td.group-even, td.group-even:hover {
+        background-color: $table-even-bg !important;
+    }
+
+    td, .grid-fixed-table td {
+        font-size: $font-size;
+    }
+
+    .freegrid-even td {
+        background-color: $table-even-bg;
+    }
+
+    .format-negative, .format-positive {
+        color: $table-red-color !important;
+    }
+
+    .free-top-left table thead th.RptHeader02, .col_header table thead th.RptHeader02 {
+        background: $table-subheader-bg-color !important;
+        color: $table-subheader-color;
+    }
+
+    .grid-pager {
+        background: #fff;
+        height: 32px;
+        line-height: 25px;
+    }
+
+    .grid-pager-content {
+        padding-top: 0;
+    }
+
+    .row-footer-background {
+        border-top: none;
+    }
+
+    .column-truncate {
+        display: block;
+    }
+}
+
+.grid-title {     
+    border: none;
+    height: 30px;
+    margin-bottom: 0;
+    
+    .grid-title-label {        
+        color: $text-red-color;
+        font-size: $font-size;
+        padding-left: 16px;
+    }
+} 
+
+/*******************************************/
+/* Paging */
+/*******************************************/
+$paging-bg: #fff;
+$paging-btn-bg: #979797;
+$paging-btn-color: #fff;
+$paging-btn-bg-hover: #676767;
+$paging-border: #666;
+
+%icon {
+    font:{
+        family: Iconalpha;
+        size: 15px;
+        weight: normal;
+    }
+}
+
+/* Pagination */
+#pagination {
+    font-family: $font-family;
+
+    .numberlist ul li {
+        margin: 0;
+    }
+
+    .gotopage_box {
+        width: 184px;
+
+        #txtpage {
+            border-color: $border-color-dark;
+            height: 22px;
+            line-height: 22px;
+            text-align: center;
+            @include box-shadow-multiple(none);
+        }
+
+        td {
+            height: 28px;
+            padding: 1px 8px !important;
+        }
+
+        #pagenav_ibtn {
+            background: url(../../assets/img/go-hover-icon.png) -3px -3px no-repeat;
+            width: 14px;
+            height: 14px;
+
+            &:hover {
+                background-position: -3px -25px !important;
+            }
+        }
+    }
+
+    div.itemperpage {        
+        color: $text-color;
+        font-size: $font-size;
+        font-weight: normal;
+    }
+
+    * {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    #itemperpage {        
+        border: 1px solid $border-color-dark;
+        height: 24px;
+        font-size: $font-size;
+        margin-left: 4px;
+        margin-right: 0;
+        padding: 4px;
+        margin-top: 3px;
+        @include border-radius(1px);
+        @include box-shadow-multiple(none);
+        @include box-sizing;
+
+    }
+
+    .numberlist {
+        border: none;
+        font-size: 13px;
+
+        ul li {
+            padding: 0;
+            height: 20px;
+            margin-right: 5px;
+            width: 20px;
+            text-align: center;
+            &.sep {
+                background: transparent;
+            }
+        }
+    }
+
+    .prev:before {
+        @extend %icon;
+        content: "\e93f";
+    }
+
+    .next {
+        text-indent: 5px;
+
+         &:before {
+            @extend %icon;
+            content: "\e942";
+            position: relative;
+            left: -1px;
+        }
+    }
+
+    a:hover, .current {
+        @include border-radius(2px);
+        background: $paging-btn-bg;
+        color: #fff;
+        font-weight: normal;
+    }
+
+    .prev, .next {
+        background: $paging-btn-bg;
+        color: #fff;
+        &:hover {
+            background: $paging-btn-bg-hover;
+        }
+    }
+
+    .current.prev,  .current.next {
+        background: $paging-btn-bg;
+        opacity: 0.55;
+    }
+
+    a, span {
+        line-height: 20px;
+        padding: 0;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Custom for firefox */
+@media screen and (-moz-images-in-menus:0) {
+    #pagination .next, #pagination .prev {
+        text-indent: 5px;
+        &:before {
+            left: -2px;
+            position: relative;
+        } 
+    }
+}

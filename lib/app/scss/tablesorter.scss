@@ -1,0 +1,135 @@
+﻿// Tablesorter
+//
+// <p><a href="http://tablesorter.com/docs/" target="_blank">Tablesorter </a>  is a jQuery plugin for turning a standard HTML table with THEAD and TBODY tags into a sortable table without page refreshes. tablesorter can successfully parse and sort many types of data including linked data in a cell. It has many useful features including:
+// <ul>
+//     <li>Multi-column sorting</li>
+//     <li>Parsers for sorting text, URIs, integers, currency, floats, IP addresses, dates (ISO, long and short formats), time. Add your own easily</li>
+//     <li>Support secondary "hidden" sorting (e.g., maintain alphabetical sort when sorting on other criteria)</li>
+//     <li>Extensibility via widget system</li>
+//     <li>Cross-browser: IE 6.0+, FF 2+, Safari 2.0+, Opera 9.0+</li>
+//     <li>Small code size</li>
+// </ul>
+// <h4 class="guide-title">How to use</h4>
+// <p>If you want to use this style, please see this file "<strong>styles/components/tablesorter.css</strong>"
+// <p><strong>For example:</strong></p>
+// <ul class="list-unstyled">
+//     <li>styles/<strong>components</strong>/tablesorter.css</li>
+//     <li><strong>--- For javascript ---</strong></li>
+//     <li>js/<strong>libs</strong>/<strong>jquery</strong>/jquery-1.11.3.js</li>
+//     <li>js/<strong>components</strong>/<strong>tablesorter</strong>/tablesorter.js</li>
+// </ul>
+//
+// markup:
+// <div class="form-advanced" sg-tablesorter>
+//     <table id="myTable" class="tblRpt tblRpt-bordered tblRpt-striped tblRpt-hover width-100per tablesorter">
+//         <thead>
+//             <tr>
+//                 <th class="sorting">Last Name</th>
+//                 <th class="sorting">First Name</th>
+//                 <th class="sorting">Email</th>
+//                 <th class="sorting">Due</th>
+//                 <th class="sorting">Web Site</th>
+//             </tr>
+//         </thead>
+//         <tbody>
+//             <tr>
+//                 <td>Smith</td>
+//                 <td>John</td>
+//                 <td>jsmith@gmail.com</td>
+//                 <td>$50.00</td>
+//                 <td>http://www.jsmith.com</td>
+//             </tr>
+//             <tr>
+//                 <td>Bach</td>
+//                 <td>Frank</td>
+//                 <td>fbach@yahoo.com</td>
+//                 <td>$50.00</td>
+//                 <td>http://www.frank.com</td>
+//             </tr>
+//             <tr>
+//                 <td>Doe</td>
+//                 <td>Jason</td>
+//                 <td>jdoe@hotmail.com</td>
+//                 <td>$100.00</td>
+//                 <td>http://www.jdoe.com</td>
+//             </tr>
+//             <tr>
+//                 <td>Conway</td>
+//                 <td>Tim</td>
+//                 <td>tconway@earthlink.net</td>
+//                 <td>$50.00</td>
+//                 <td>http://www.timconway.com</td>
+//             </tr>
+//         </tbody>
+//     </table>
+// </div>
+//
+// sg-angular-directive:
+// name: sgTablesorter
+// file: js/styleguide/components/tablesorter/tablesorter.js
+// file: js/styleguide/demoTablesorter.js
+//
+// Styleguide 5.17
+
+.tablesorter {
+    text-align: left;
+
+    th {
+        padding: 0 14px;
+    }
+
+    %alphaIcon {
+        cursor: pointer;
+        font-family: 'Iconalpha';
+        font-size: 12px;
+        position: absolute;
+        right: 0;
+        padding: 0 2px;
+    }
+
+    .sorting {
+        background-clip: padding-box;
+        cursor: pointer;
+        position: relative;        
+        padding-right: 14px;
+
+        &:after {
+            @extend %alphaIcon;
+            content: '\e960';
+        }
+
+        &.sorting-asc {
+            &:after, &.col-combine .prior-sortedcolumn:after {
+                @extend %alphaIcon;
+                content: '\e961';
+                color: #ff1500;
+            }
+        }
+
+        &.sorting-desc {
+            &:after, &.col-combine .prior-sortedcolumn:after {
+                @extend %alphaIcon;
+                content: '\e962';  
+                color: #ff1500;
+            }     
+        }
+
+        &.col-combine {
+            &:after {
+                display: none;
+            }
+
+            .prior-sortedcolumn {
+                position: relative;
+                padding-right: 16px;
+
+                &:after {
+                    @extend %alphaIcon;
+                    content: '\e960';
+                }
+            }
+            
+        }
+    }
+}
+

@@ -1,0 +1,5 @@
+Nodejs verion:
+node 0.12.x
+node 4.2.x
+
+sc5-styleguide version: "1.0.0",

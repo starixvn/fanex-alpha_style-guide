@@ -1,0 +1,303 @@
+﻿// Accordions
+//
+// <p><a href="http://getbootstrap.com/javascript/#collapse-example-accordion" target="_blank"><strong>Accordions</strong></a> are elements that help you organize and navigate multiple documents in a single container. They can be used for switching between items in the container.</p>
+//
+// Styleguide 5.9
+
+// Style 1
+//
+// <p>If you want to use this style, please see the following instruction:</p>
+// <ul>   
+//    <li>Please create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and copy only necessary CSS codes for accordions from this file "<strong>styles/vendors/bootstrap.scss</strong>".</li>
+//    <li>Add more file <strong>"styles/components/accordions.css"</strong></li>
+// </ul>
+// <p><strong>For example</strong></p>
+// <ul class="list-unstyled">
+//     <li>styles/<strong>vendors-extensions</strong>/<strong>site-abc</strong>/bootstrap-ex.css</li>
+//     <li>styles/<strong>components</strong>/accordions.css</li>
+//     <li>--- About javascript ---</li>
+//     <li>js/<strong>libs</strong>/<strong>jquery</strong>/jquery-1.11.3.js</li>
+//     <li>js/<strong>libs</strong>/<strong>bootstrap</strong>/collapse.js</li>
+// </ul>
+//
+// markup:
+// <div class="panel-group panel-text" id="accordion" role="tablist" aria-multiselectable="true">
+//  <div class="panel">
+//    <div class="panel-heading" role="tab" id="headingOne">
+//      <h4 class="panel-title">
+//        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+//          Collapsible Group Item #1
+//        </a>
+//      </h4>
+//    </div>
+//    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+//      <div class="panel-body">
+//          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+//      </div>
+//    </div>
+//  </div>
+//  <div class="panel">
+//    <div class="panel-heading" role="tab" id="headingTwo">
+//      <h4 class="panel-title">
+//        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+//          Collapsible Group Item #2
+//        </a>
+//      </h4>
+//    </div>
+//    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+//      <div class="panel-body">
+//          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+//      </div>
+//    </div>
+//  </div>
+// </div>
+//
+// Styleguide 5.9.1
+
+// styleguide:ignore:start
+.panel-header, .panel-body {
+    border: none;
+}
+.panel-group.panel-text .panel-heading + .panel-collapse > .panel-body {
+    font-size: $font-size;
+}
+
+.panel-title {
+    font-size: $font-size;
+    font-weight: normal;
+    color: $text-color;
+    height: auto;
+    line-height: initial;
+}
+
+// styleguide:ignore:end
+
+.panel-group.panel-text {
+    .panel {
+        background: none;
+    }
+
+    .panel-heading {
+        padding: 0; 
+        @include border-radius(0);
+
+        .panel-title a {
+            color: #333;
+            font-size: 13px;
+            height: 28px;
+            line-height: 28px;            
+            cursor: pointer;
+            display: block;
+            padding: 0 6px;
+            @include box-sizing;
+
+            &:before {
+                font-family: 'Iconalpha';
+                font-weight: 100;
+                top: 1px;
+                position: relative;
+                margin-right: 4px;
+            }
+
+            &.collapsed:before {
+                content: '\e91d';
+            }
+
+            &:not(.collapsed) {
+                &:before {
+                    content: '\e91c';
+                }
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }        
+    }
+
+    .panel-heading + .panel-collapse > .panel-body {
+        border-top: none;
+        padding: 4px 24px;
+    }
+}
+
+// Style 2
+//
+// <p>If you want to use this style, please see the following instruction:</p>
+// <ul>   
+//    <li>Please create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and copy only necessary CSS codes for accordions from this file "<strong>styles/vendors/bootstrap.scss</strong>".</li>
+//    <li>Add more file <strong>"styles/components/accordions.css"</strong></li>
+// </ul>
+// <p><strong>For example</strong></p>
+// <ul class="list-unstyled">
+//     <li>styles/<strong>vendors-extensions</strong>/<strong>site-abc</strong>/bootstrap-ex.css</li>
+//     <li>styles/<strong>components</strong>/accordions.css</li>
+//     <li>--- About javascript ---</li>
+//     <li>js/<strong>libs</strong>/<strong>jquery</strong>/jquery-1.11.3.js</li>
+//     <li>js/<strong>libs</strong>/<strong>bootstrap</strong>/collapse.js</li>
+// </ul>
+//
+// markup:
+// <div class="panel-group panel-table" id="accordion" role="tablist" aria-multiselectable="true">
+//  <div class="panel">
+//    <div class="panel-heading" role="tab" id="headingOne">
+//      <h4 class="panel-title">
+//        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseOne">
+//          Soccer
+//        </a>
+//      </h4>
+//    </div>
+//    <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+//      <div class="panel-body">
+//          <table class="tblRpt tblRpt-bordered width100per">
+//               <thead>
+//                  <tr class="RptHeader">
+//                        <th class="header bettypeCol">Bettype</th>
+//                        <th class="header" colspan="2">Followed By</th>
+//                    </tr>
+//               </thead>
+//                <tbody>
+//                    <tr>
+//                        <td class="bettype" rowspan="1">FT.1X2</td>
+//                        <td class="text-right followedByCol">Soccer</td>
+//                        <td class="text-left followedByCol">1H 1X2</td>
+//                    </tr>
+//                    <tr>
+//                        <td class="bettype" rowspan="2">Total Goal</td>
+//                        <td class="text-right followedByCol">Soccer</td>
+//                        <td class="text-left followedByCol">1H Total Goal</td>
+//                    </tr>
+//                    <tr>
+//                        <td class="text-right followedByCol">Soccer</td>
+//                        <td class="text-left followedByCol">Exact 1st Half Goal</td>
+//                    </tr>
+//                </tbody>
+//          </table>
+//      </div>
+//    </div>
+//  </div>
+//  <div class="panel">
+//    <div class="panel-heading" role="tab" id="headingTwo">
+//      <h4 class="panel-title">
+//        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+//          Basketball
+//        </a>
+//      </h4>
+//    </div>
+//    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+//      <div class="panel-body">
+//        <table class="tblRpt width100per">
+//            <thead>
+//                <tr class="RptHeader">
+//                    <th class="header bettypeCol">Bettype</th>
+//                    <th class="header" colspan="2">Followed By</th>
+//                </tr>
+//            </thead>
+//            <tbody>
+//                <tr>
+//                    <td class="bettype" rowspan="1">Handicap</td>
+//                    <td class="text-right followedByCol">Netball</td>
+//                    <td class="text-left followedByCol">Handicap</td>
+//                </tr>
+//                <tr>
+//                    <td class="bettype" rowspan="1">Over/Under</td>
+//                    <td class="text-right followedByCol">Netball</td>
+//                    <td class="text-left followedByCol">Over/Under</td>
+//                </tr>
+//                <tr>
+//                    <td class="bettype" rowspan="1">1H Handicap</td>
+//                    <td class="text-right followedByCol">Netball</td>
+//                    <td class="text-left followedByCol">1H Handicap</td>
+//                </tr>
+//                <tr>
+//                    <td class="bettype" rowspan="1">1H Over/Under</td>
+//                    <td class="text-right followedByCol">Netball</td>
+//                    <td class="text-left followedByCol">1H Over/Under</td>
+//                </tr>
+//            </tbody>
+//          </table>
+//      </div>
+//    </div>
+//  </div>
+// </div>
+//
+// Styleguide 5.9.2
+
+@font-face {
+    font-family: 'Iconalpha';
+    src:    url('assets/fonts/iconalpha/fonts/Iconalpha.eot');
+    src:    url('assets/fonts/iconalpha/fonts/Iconalpha.eot#iefix') format('embedded-opentype'),
+        url('assets/fonts/iconalpha/fonts/Iconalpha.ttf') format('truetype'),
+        url('assets/fonts/iconalpha/fonts/Iconalpha.woff') format('woff'),
+        url('assets/fonts/iconalpha/fonts/Iconalpha.svg#Iconalpha') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.panel-group .panel {
+    @include box-shadow-multiple(none);
+    @include border-radius(0);
+}
+
+.panel-group.panel-table {
+    .panel {
+        background: none;
+    }
+
+    .panel-heading {
+        padding: 0; 
+        @include border-radius(0);
+
+        .panel-title a {
+            border: 1px solid $border-color;
+            background-color: #f9f9f9;
+            color: #9d1c1c;
+            font-size: 13px;
+            height: 36px;
+            line-height: 30px;            
+            cursor: pointer;
+            font-weight: bold;
+            display: block;
+            padding: 0 6px;
+            @include box-sizing;
+
+            &:before {
+                font-family: 'Iconalpha';
+                font-size: 16px;
+                margin-right: 2px;
+                position: relative;
+                top: 2px;
+            }
+
+            &.collapsed:before {
+                content: '\e929';
+            }
+
+            &:not(.collapsed) {
+                border-color: #b3b3b3;
+
+                &:before {
+                    content: '\e928';
+                }
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                border-color: #b3b3b3;
+            }
+        }        
+    }
+
+    .panel-heading + .panel-collapse > .panel-body {
+        border-top: none;
+        padding: 4px 0;
+    }
+}
+
+
+.followedByCol {
+    width: 35%;
+}

@@ -1,0 +1,259 @@
+// Modals
+// 
+// Styleguide 5.7
+
+// Static example
+// 
+// A rendered modal with <strong>header, body, and set of actions in the footer</strong>.
+// <h4 class="guide-title">How to use</h4>
+// <p>If you want to apply this style, please see the following instruction:
+// <ol>
+//      <li>Create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and <br> copy only necessary CSS codes for modals from this file "<strong>styles/vendors/bootstrap.scss</strong>".</li>
+//      <li>Use this file "<strong>styles/components/modals.css</strong>" (was appropriately customized for the current style).</li>
+// </ol>
+// <p><strong>For example:</strong></p>
+// <ul>
+//     <li>styles/<strong>vendors-extensions</strong>/<strong>site-main</strong>/bootstrap-ex.scss</li>
+//     <li>styles/<strong>components</strong>/modals.css</li>
+//     <li>--- About javascript ---</li>
+//     <li>js/libs/<strong>jquery</strong>/jquery-1.11.3.js</li>
+//     <li>js/libs/<strong>bootstrap</strong>/modal.js</li>
+// </ul> 
+//
+// markup:
+// <div class="bs-example bs-example-modal">
+// <div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+//  <div class="modal-dialog" role="document">
+//    <div class="modal-content">
+//      <div class="modal-header">
+//        <button type="button" class="icon icon-close close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+//        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+//      </div>
+//      <div class="modal-body">
+//        ...
+//      </div>
+//      <div class="modal-footer">
+//        <button type="button" class="btn-default" data-dismiss="modal">Close</button>
+//        <button type="button" class="btn-submit">Save changes</button>
+//      </div>
+//    </div>
+//  </div>
+// </div>
+//
+// Styleguide 5.7.1
+
+// styleguide:ignore:start
+.bs-example-modal .modal {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 999;
+    display: block;
+    height: 200px;
+
+    .icon {
+        position: relative;
+    }
+}
+
+.modal {
+    height: auto;
+}
+// styleguide:ignore:end
+
+.modal-dialog {
+    margin: 0 auto;   
+
+    &.ex-modal {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.modal-content {
+    @include effect-special;
+    border-color: $border-color;
+    margin: auto;
+    height: 100%;
+
+    .modal-header {
+        padding: 0 16px;
+        border-bottom: none;
+
+        .icon-close {
+            margin-right: 0;
+            color: #333;
+            opacity: 1;
+            font-size: 18px;
+            top: 6px;
+            width: 60px;
+            height: 30px;
+            left: 10px;
+            &:before {
+                position: relative;
+                left: 13px;
+            }
+        }
+
+        .modal-title {
+            border-bottom: 1px solid $border-color;
+            color: $text-color;
+            font-weight: 700;
+            padding: 10px 0;
+            font-size: 13px;
+            cursor:move;
+
+            .popup-title:empty {
+                height: 20px;
+                display: block;
+            }
+        }
+    }
+
+    .modal-body {
+        padding: 2px 16px 8px;
+        line-height: 22px;
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .modal-footer {
+        border-top: none;
+        padding: 12px 16px 20px;
+
+        button:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+// Live Demo
+//
+// Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.
+// <h4 class="guide-title">How to use</h4>
+// <p>If you want to apply this style, please see the following instruction:
+// <ol>
+//      <li>Create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and <br> copy only necessary CSS codes for modals from this file "<strong>styles/vendors/bootstrap.scss</strong>".</li>
+//      <li>Use this file "<strong>styles/components/modals.css</strong>" (was appropriately customized for the current style).</li>
+// </ol>
+// <p><strong>For example:</strong></p>
+// <ul>
+//     <li>styles/<strong>vendors-extensions</strong>/<strong>site-main</strong>/bootstrap-ex.scss</li>
+//     <li>styles/<strong>components</strong>/modals.css</li>
+//     <li>--- About javascript ---</li>
+//     <li>js/libs/<strong>jquery</strong>/jquery-1.11.3.js</li>
+//     <li>js/libs/<strong>bootstrap</strong>/modal.js</li>
+// </ul> 
+//
+// markup:
+// <button type="button" class="btn-submit" data-toggle="modal" data-target="#myModal2">
+//   Launch demo modal
+// </button>
+// <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+//  <div class="modal-dialog" role="document">
+//    <div class="modal-content">
+//      <div class="modal-header">
+//        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+//        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+//      </div>
+//      <div class="modal-body">
+//        ...
+//      </div>
+//      <div class="modal-footer">
+//        <button type="button" class="btn-default" data-dismiss="modal">Close</button>
+//        <button type="button" class="btn-submit">Save changes</button>
+//      </div>
+//    </div>
+//  </div>
+//
+// Styleguide 5.7.2
+
+
+// Bootbox library
+//
+// <p><a href="http://bootboxjs.com/" target="_blank"><strong>Bootbox.js</strong></a> is a small JavaScript library which allows you to create programmatic <strong>dialog boxes</strong> using <strong>Bootstrap modals</strong>, <br> without having to worry about creating, managing or removing any of the required DOM elements or JS event handlers.</p>
+// <h4 class="guide-title">How to use</h4>
+// <p>If you want to apply this style, please see the following instruction:
+// <ol>
+//      <li>Create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and <br> copy only necessary CSS codes for modals from this file "<strong>styles/vendors/bootstrap.scss</strong>".</li>
+//      <li>Use this file "<strong>styles/components/modals.css</strong>" (was appropriately customized for the current style).</li>
+// </ol>
+// <p><strong>For example:</strong></p>
+// <ul>
+//     <li>styles/<strong>vendors-extensions</strong>/<strong>site-main</strong>/bootstrap-ex.scss</li>
+//     <li>styles/<strong>components</strong>/modals.css</li>
+//     <li>--- About javascript ---</li>
+//     <li>js/libs/<strong>jquery</strong>/jquery-1.11.3.js</li>
+//     <li>js/libs/<strong>bootstrap</strong>/modal.js</li>
+//     <li>js/components/<strong>bootbox</strong>/bootbox.js</li>
+// </ul> 
+//
+// markup:
+// <div sg-popup-confirm>
+//     <div class="bb-alert alert alert-info" style="display: none;">
+//         <span>Hello world callback</span>
+//     </div>
+//     <button href="#" data-bb="alert" class="btn-default">Alert</button>
+//     <button href="#" data-bb="confirm" class="btn-submit">Confirm</button>
+//</div>
+//
+// sg-angular-directive:
+// name: sgPopupConfirm
+// file: js/styleguide/components/bootbox/bootbox.js
+// file: js/styleguide/customizeBootbox.js
+//
+// Styleguide 5.7.3
+
+.bootbox {
+    .modal-body {
+        padding: 40px 16px 16px;
+        font-size: 14px;
+    }
+
+    .modal-dialog {
+        margin: 0;
+        width: 500px;
+        display: table;
+    }
+
+    .close {
+        color: $text-color;
+        opacity: 1;
+        position: relative;
+        top: -18px;
+        right: -4px;
+    }
+
+    .modal-footer {
+        border-top: none;
+        padding-bottom: 4px;
+
+        .btn {
+            border: none;
+            background: none;
+            color: #045ace;
+            font-weight: bold;
+            line-height: 28px;
+            padding: 0 16px;
+            margin: 8px;
+            min-width: 78px;
+            text-transform: capitalize;
+            text-transform: uppercase;
+            @include border-radius(1px);
+            @include box-shadow(0, 0, 0, transparent);
+
+            &:hover, &:focus {
+                background-color: #ececec;
+                border: none;
+                outline: none;
+            }
+
+            &.btn-default {
+                color: $text-color;
+                float: right;
+            }
+        }
+    }
+}

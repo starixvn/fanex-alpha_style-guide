@@ -1,0 +1,119 @@
+// Sidebar
+//
+// markup:
+//<ul class="list-menu" id="main-menu-items">
+//    <li class="menu-item " id="menu-REPORTS">               
+//         <a class="withripple menu-opener parent-menu active">               
+//             <span class="txt-item pull-left"><span class="icon icon-reports"></span>Reports</span>               
+//             <span class="pull-right icon-arrow-right"></span>               
+//         <div class="ripple-container"></div></a>                                 
+//    </li>               
+//    <li class="menu-item " id="menu-MEMBERINFO">               
+//        <a class="withripple menu-opener parent-menu ">               
+//            <span class="txt-item pull-left"><span class="icon icon-memberinfo"></span>MEMBER INFORMATION</span>               
+//            <span class="pull-right icon-arrow-right"></span>               
+//        </a>               
+//    </li>               
+//    <li class="menu-item " id="menu-BETSANDFORECAST">               
+//        <a class="withripple menu-opener parent-menu ">               
+//            <span class="txt-item pull-left"><span class="icon icon-betsandforecast"></span>Bets &amp; Forecast <span class="beta-version">Beta</span></span>               
+//            <span class="pull-right icon-arrow-right"></span>               
+//        </a>               
+//    </li>               
+//    <li class="menu-item " id="menu-TOTALBETS">               
+//        <a class="withripple menu-opener parent-menu ">               
+//            <span class="txt-item pull-left"><span class="icon icon-totalbets"></span>Total Bets</span>               
+//            <span class="pull-right icon-arrow-right"></span>               
+//        </a>                                      
+//    </li>               
+//    <li class="menu-item " id="menu-FORECAST">               
+//        <a class="withripple menu-opener parent-menu ">               
+//            <span class="txt-item pull-left"><span class="icon icon-forecast"></span>Forecast</span>               
+//            <span class="pull-right icon-arrow-right"></span>               
+//        </a>               
+//    </li>               
+//    <li class="menu-item" id="menu-TRANSFER">               
+//        <a class="withripple menu-opener parent-menu redirect-item" href="/site-oldmain/_Transfer/Super/MasterList.aspx" target="main">               
+//            <span class="txt-item pull-left"><span class="icon icon-transfer"></span>Transfer</span>               
+//        </a>               
+//    </li>               
+//    <li class="menu-item " id="menu-VIEWLOG">               
+//        <a class="withripple menu-opener parent-menu ">               
+//            <span class="txt-item pull-left"><span class="icon icon-viewlog"></span>View Log</span>               
+//            <span class="pull-right icon-arrow-right"></span>               
+//        </a>               
+//    </li>               
+//    <li class="menu-item " id="menu-ANNOUNCEMENTS">               
+//        <a class="withripple menu-opener parent-menu ">               
+//            <span class="txt-item pull-left"><span class="icon icon-announcements"></span>Announcements</span>               
+//            <span class="pull-right icon-arrow-right"></span>               
+//        </a>               
+//     </li>     
+// </ul>
+//
+// Styleguide 5.9
+
+.menu-item {
+    position: relative;
+    color: #222;
+    font-weight: 600;
+    padding: 0;
+    list-style: none;
+    width: 256px;
+
+    .icon {
+        margin-right: 14px;
+        width: 16px;
+        position: relative;
+        left: 1px;
+        top: 3px;
+        cursor: pointer;
+        font-size: 16px;
+
+        &.icon-totalbets {
+            font-size: 14px;
+        }
+    }
+
+    > a {
+        cursor: pointer;
+        color: #222;
+        display: table;
+        white-space: nowrap;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 100%;
+        min-height: 3rem;
+        background: transparent;
+        padding: 14px 8px 14px 12px;
+
+        .icon-arrow-right {
+            @include transform(rotate(0));
+            font-size: 16px;
+            position: relative;
+            top: 2px;
+            @include transition(transform 0.3s ease-out);
+        }
+
+        &.active {
+            background: #e5e5e5;
+
+            .icon-arrow-right {
+                @include transform(rotate(90deg));
+            }
+        }
+
+        &:hover {
+            background: #e5e5e5;
+        }
+    }
+
+    .beta-version {
+        background: #da1526;
+        font-size: 10px;
+        color: #fff;
+        text-transform: initial;
+        padding: 2px;
+        margin-left: 3px;
+    }
+}

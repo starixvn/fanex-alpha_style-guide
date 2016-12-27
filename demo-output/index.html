@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sgApp">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/assets/img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    var _styleguideConfig = {"title":"Alpha styleguide for microsite","disableEncapsulation":true,"disableHtml5Mode":false,"sideNav":false};
+    (function() {
+      'use strict';
+      var userStyleFiles = [
+          '/styleguide.css',
+          '/styleguide_pseudo_styles.css',
+          '/styleguide_helper_elements.css'
+        ],
+        head = document.querySelector('head');
+
+      function addCssLink(href, options) {
+        var link = document.createElement('link');
+        link.setAttribute('rel', 'stylesheet');
+        link.setAttribute('type', 'text/css');
+        link.setAttribute('href', href);
+        if (options && options.noReload) {
+          link.setAttribute('data-noreload', true);
+        }
+        head.appendChild(link);
+      }
+
+      // Use Shadow DOM but fallback to global styles if shadow DOM is not supported
+      if (typeof head.createShadowRoot !== 'function' || _styleguideConfig.disableEncapsulation) {
+        userStyleFiles.forEach(addCssLink);
+      }
+
+      addCssLink('/styleguide_at_rules.css');
+      addCssLink('/styleguide-app.css', {noReload: true});
+    }());
+  </script>
+  <script type="text/ng-template" id="userStyles.html">
+    <style>
+      @import url('/styleguide.css');
+      @import url('/styleguide_pseudo_styles.css');
+      @import url('/styleguide_helper_elements.css');
+    </style>
+  </script>
+  <title ng-bind-html="$root.pageTitle | unsafe">Alpha styleguide for microsite</title>
+  
+  <script type="text/javascript">
+    var filesConfig = [{"name":"sgCheckboxRadio","files":["js/styleguide/checkboxradio.js","js/styleguide/components/bootstrap-material-design/ripples.js","js/styleguide/components/bootstrap-material-design/material.js"]},{"name":"sgFanexgrid","files":["js/styleguide/customizeFanexGrid.js"]},{"name":"sgFormDatepicker","files":["js/styleguide/components/moment/moment.js","js/styleguide/components/datetimepicker/datepicker.js","js/styleguide/components/datetimepicker/bootstrap-datetimepicker.js","js/styleguide/formDatepicker.js"]},{"name":"sgDemoNexDatePicker","files":["js/styleguide/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js","js/styleguide/demoNexDatePicker.js"]},{"name":"sgMonthpicker","files":["js/styleguide/components/monthpicker/monPickr-0.0.3.js","js/styleguide/customizeMonthpicker.js"]},{"name":"sgTooltip","files":["js/styleguide/initializeTooltip.js"]},{"name":"sgPagination","files":["js/styleguide/components/pagination/jquery.parser.js","js/styleguide/components/pagination/jquery.linkbutton.js","js/styleguide/components/pagination/jquery.pagination.js","js/styleguide/customizePagination.js"]},{"name":"sgPagination2","files":["js/styleguide/customizePagination2.js"]},{"name":"sgPagination3","files":["js/styleguide/customizePagination3.js"]},{"name":"sgDemoToastr","files":["js/styleguide/components/toastr/toastr.js","js/styleguide/demoToastr.js"]},{"name":"sgPopupConfirm","files":["js/styleguide/components/bootbox/bootbox.js","js/styleguide/customizeBootbox.js"]},{"name":"sgDemoblockui","files":["js/styleguide/components/blockui/jquery.blockUI.js","js/styleguide/initializeBlockUI.js"]},{"name":"sgStickytableheader","files":["js/styleguide/components/sticky-table-headers/jquery.stickytableheaders.js","js/styleguide/initializeStickyTableHeader.js"]},{"name":"sgDemoBootstrapMultiselect","files":["js/styleguide/components/bootstrap-3.3.6-dist/js/bootstrap.js","js/styleguide/components/multiselect/bootstrap-multiselect.js","js/styleguide/formWithBootstrapMultiSelect.js"]},{"name":"sgFormSelect2","files":["js/styleguide/components/select2/select2.js","js/styleguide/formWithSelect2.js"]},{"name":"sgTablesorter","files":["js/styleguide/components/tablesorter/tablesorter.js","js/styleguide/demoTablesorter.js"]}];
+  </script>
+  <base href="/" />
+</head>
+<body class="sg">
+  
+  <div class="sg view-index" ui-view></div>
+  <script src="/js/vendor.js"></script>
+  <script src="/js/app.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/styleguide/components/jquery/jquery-1.11.3.js"></script>
+<script src="/js/styleguide/components/moment/moment.js"></script>
+<script src="/js/styleguide/components/FanexGrid/Fanex.Grid.js"></script>
+<script src="/js/styleguide/components/FanexGrid/Fanex.Pagination.js"></script>
+<script src="/js/styleguide/components/scrollbar/jquery.mCustomScrollbar.js"></script>
+</body>
+</html>

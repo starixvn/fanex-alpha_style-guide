@@ -1,0 +1,217 @@
+// Bootstrap Multiselect
+//
+// <p>Use <a href="http://davidstutz.github.io/bootstrap-multiselect/#getting-started" target="_blank">bootstrap multiselect</a> plugin to create your <code>select</code> input which you want to turn into a multiselect. Remember to set the <code>multiple</code> attribute as to get a real multiselect,<br> but do not worry, the plugin can also be used as usual select without the <code>mutiple</code> attribute being present.</p>
+// <p>First, the jQuery library needs to be included. Then Twitter Bootstrap - both the Javascript library and the CSS stylesheet - needs to be included.</p>
+// <h4 class="guide-title">How to use</h4>
+// <p>If you want to use this style, please see the following instruction:</p>
+// <ul>   
+//    <li>Please create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and copy only necessary CSS codes for forms from this file "<strong>styles/vendors/bootstrap.scss</strong>".
+//         <p><strong>For example:</strong> styles/vendors-extensions/site-totalbetsforecast/bootstrap-ex.css<p>
+//    </li>
+//    <li>Add these more file "<strong>styles/vendors/bootstrap-multiselect.css</strong>", "<strong>styles/components/bootstrap-multiselect.css</strong>"</li>
+// </ul>
+// <p><strong>For example:</strong></p>
+// <ul class="list-unstyled">
+//     <li>styles/<strong>vendors-extensions</strong>/<strong>site-totalbetsforecast</strong>/bootstrap-ex.css</li>
+//     <li>styles/<strong>vendors</strong>/bootstrap-multiselect.css</li>
+//     <li>styles/<strong>components</strong>/bootstrap-multiselect.css</li>
+//     <li><strong>--- For javascript ---</strong></li>
+//     <li>js/<strong>libs</strong>/<strong>jquery</strong>/jquery-1.11.3.js</li>
+//     <li>js/<strong>libs</strong>/<strong>bootstrap</strong>/button.js</li>
+//     <li>js/<strong>libs</strong>/<strong>bootstrap</strong>/dropdown.js</li>
+//     <li>js/<strong>components</strong>/<strong>multiselect</strong>/bootstrap-multiselect.js</li>
+// </ul>
+//
+// markup:
+// <div sg-demo-bootstrap-multiselect>
+//   <form class="form-inline filter" role="form">
+//       <div class="form-group">
+//           <label>League</label>
+//           <select id="leagueList" >
+//               <option value="11711" label="AUSTRALIA VICTORIA PREMIER LEAGUE" selected="selected">AUSTRALIA VICTORIA PREMIER LEAGUE</option>
+//               <option value="220" label="BRAZIL CUP">BRAZIL CUP</option>
+//           </select>
+//       </div>
+//       <div class="form-group last-filter">
+//           <label>Event</label>
+//           <select id="eventList" multiple="multiple">
+//               <option value="18895053" label="Crystal Palace - West Bromwich Albion">Crystal Palace - West Bromwich Albion</option>
+//               <option value="18895050" label="Burnley - Swansea City" selected="selected">
+//                   Burnley - Swansea City
+//               </option>
+//           </select>
+//       </div>
+//       <div class="form-group">
+//           <input type="button" class="btn-submit" id="btnSubmit" value="Submit">
+//       </div>
+//   </form>
+// </div>
+//
+// sg-angular-directive:
+// name: sgDemoBootstrapMultiselect
+// file: js/styleguide/components/bootstrap-3.3.6-dist/js/bootstrap.js
+// file: js/styleguide/components/multiselect/bootstrap-multiselect.js
+// file: js/styleguide/formWithBootstrapMultiSelect.js
+//
+// Styleguide 5.15
+
+// styleguide:ignore:start
+.form-inline .multiselect-container {
+    label.radio input[type=radio] {
+        opacity: 1;
+        height: auto;
+        width: auto;
+        z-index: 100;
+    }   
+
+    label.checkbox input[type=checkbox] {
+        opacity: 1;
+        height: auto;
+        width: auto;
+        z-index: 100;
+    }     
+
+    label.checkbox, label.radio {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    
+    .active > a, .active > a:hover, .active > a:focus {
+        label { color: #fff; }
+    }     
+}
+
+.form-advanced {
+    margin: 10px 0 100px;
+}
+
+// styleguide:ignore:end
+
+$dropdown-color: $text-color;
+$dropdown-color-disable: #888;
+$dropdown-bg: #fff;
+$dropdown-bg-hover: #ddd;
+$dropdown-bg-active: #337AB7;
+$dropdown-color-active: #fff;
+$dropdown-border: $border-color;
+
+.btn-group {
+    button.multiselect {
+         @include box-shadow(0, 1px, 1px, rgba(0,0,0,.3));
+        background: #fff;
+        font-size: $font-size;
+        position: relative;
+        padding: 6px 10px;
+        
+        &:hover {
+            color: inherit;
+        }
+
+        &:focus, &:visited {
+            @include box-shadow(0, 1px, 1px, rgba(0,0,0,.3));
+        }
+
+        .caret {
+            position: absolute;
+            right: 10px;
+            top: 12px;
+        }
+    }
+
+    &.open > .dropdown-toggle.btn-default {
+        background: #fff;
+        @include effect-textbox;
+    }
+}
+
+.multiselect {
+    &.btn-default.active, &.btn-default:active {
+        background: #fff;
+    }
+
+    .multiselect-selected-text {
+        width: 170px;
+        margin-right: 10px;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        text-align: left;
+    }
+}
+
+.multiselect-container.dropdown-menu {
+    border: 1px solid $dropdown-border;
+    font-size: 13px;
+    min-width: initial;
+    @include effect-normal;
+
+    > li:hover > a {
+        background-color: $dropdown-bg-hover;
+    }
+
+    > li > a > label {
+        line-height: 28px;
+        padding: 0 20px 0 35px;
+    }
+
+    label.checkbox, label.radio {
+        display: block;
+    }
+
+    .filter {
+        padding: 0;
+        &:hover {
+            background: #fff;
+        }
+        .input-group {
+            width: 91%;
+
+            .input-group-addon, .input-group-btn {
+                display: none;
+            }
+
+            .form-control.multiselect-search {
+                width: 100%;
+                margin-left: 8px;
+                border-radius: 2px;
+                box-shadow: none;
+                border: 1px solid #aaa;
+                line-height: 18px;
+
+                &:hover {
+                    background: #fff;
+                }
+            }
+        }
+    }
+
+    .checkbox input[type="checkbox"],
+    .checkbox-inline input[type="checkbox"], 
+    .radio input[type="radio"], 
+    .radio-inline input[type="radio"] {
+        margin-left: -22px;
+        top: 2px;
+    }
+
+     .multiselect-all a {
+        border-bottom: 1px solid $border-color-dark;
+    }
+}
+
+.form-inline .multiselect-container {
+    label.checkbox, label.radio {
+        padding: 2px 20px 2px 36px;
+    }
+
+    .active > a label, .active > a:hover label, .active > a:focus label {
+        color: $text-color;
+    }
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    background: none;
+    color: $text-color;
+}

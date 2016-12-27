@@ -1,0 +1,82 @@
+// Alerts
+//
+// markup:
+// <div class="msg msg-success">Success Message</div>
+// <div class="msg msg-info">Info Message</div>
+// <div class="msg msg-warning">Warning Message</div>
+// <div class="msg msg-error">Error Message</div>
+//
+// Styleguide 5.4
+
+$msg-success-bg: #eefbe9;
+$msg-success-color: #52a220;
+$msg-success-border: #1db51a;
+$msg-info-bg: #e3f5fa;
+$msg-info-color: #326cb4;
+$msg-info-border: #3475c7;
+$msg-warning-bg: #faf8dd;
+$msg-warning-color: #7e3d00;
+$msg-warning-border: #bcba7d;
+$msg-warning-icon-color: #f08708;
+$msg-error-bg: #fadddd;
+$msg-error-color: #fe0000;
+$msg-error-border: #ef2d2d;
+
+.msg {
+    border-width: 1px;
+    border-style: solid;
+    padding: 12px 12px 12px 48px;
+    position: relative;
+    margin: 16px 0;
+    @include border-radius(2px);
+    @include box-sizing;
+
+    &:before {
+        font-family: Iconalpha;
+        font-size: 24px;
+        position: absolute;
+        left: 16px;
+        top: 4px;
+    }
+}
+
+.msg-success {
+    background-color: $msg-success-bg;
+    border-color: $msg-success-border;
+    color: $msg-success-color;
+
+    &:before {
+        content: '\e93b';
+    }
+}
+
+.msg-info {
+    background-color: $msg-info-bg;
+    border-color: $msg-info-border;
+    color: $msg-info-color;
+
+    &:before {
+        content: '\e93c';
+    }
+}
+
+.msg-warning {
+    background-color: $msg-warning-bg;
+    border-color: $msg-warning-border;
+    color: $msg-warning-color;
+
+    &:before {
+        content: '\e93d';
+        color: $msg-warning-icon-color;
+    }
+}
+
+.msg-error {
+    background-color: $msg-error-bg;
+    border-color: $msg-error-border;
+    color: $msg-error-color;
+
+    &:before {
+        content: '\e93e';
+    }
+}

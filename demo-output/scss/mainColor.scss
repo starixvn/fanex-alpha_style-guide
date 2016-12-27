@@ -1,0 +1,23 @@
+// Main colors 
+//
+// Main colors for three levels
+//
+// $super-level-color - Super level color
+// $master-level-color - Master level color
+// $agent-level-color - Agent level color
+//
+// markup:
+// <div style="background-color: {$modifiers};" class="styleguide-color">{$modifiers}</div>
+//
+// Styleguide 1.1
+
+.guide-title {
+    color: rgb(23, 209, 230) !important;
+    font-weight: bold !important;
+    margin: 0 !important;
+}
+
+ul {
+    padding-left: 16px;
+}
+

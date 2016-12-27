@@ -1,0 +1,23 @@
+<div ng-controller="sgDemoBootstrapMultiselect" class="form-advanced">
+    <form class="form-inline filter" role="form">
+        <div class="form-group">
+            <label>League</label>
+            <select id="leagueList" >
+                <option value="11711" label="AUSTRALIA VICTORIA PREMIER LEAGUE" selected="selected">AUSTRALIA VICTORIA PREMIER LEAGUE</option>
+                <option value="220" label="BRAZIL CUP">BRAZIL CUP</option>
+            </select>
+        </div>
+        <div class="form-group last-filter">
+            <label>Event</label>
+            <select id="eventList" multiple="multiple">
+                <option value="18895053" label="Crystal Palace - West Bromwich Albion">Crystal Palace - West Bromwich Albion</option>
+                <option value="18895050" label="Burnley - Swansea City" selected="selected">
+                    Burnley - Swansea City
+                </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input type="button" class="btn-submit" id="btnSubmit" value="Submit">
+        </div>
+    </form>
+</div>

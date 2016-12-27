@@ -1,0 +1,262 @@
+﻿// Tabs
+//
+// <p><a href="http://getbootstrap.com/javascript/#tabs" target="_blank"><strong>Tabs</strong></a> are elements that help you organize and navigate multiple documents in a single container. They can be used for switching between items in the container.</p>
+//
+// Styleguide 5.8
+
+// Basic tabs
+//
+// <p>If you want to use this style, please see the following instruction:</p>
+// <ol>   
+//    <li>Please create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and copy only necessary CSS codes for tabs from this file "<strong>styles/vendors/bootstrap.scss</strong>".</li>
+//    <li>Add more file <strong>"styles/components/tabs.css"</strong></li>
+// </ol>
+// <p><strong>For example</strong></p>
+// <ul class="list-unstyled">
+//     <li>styles/<strong>vendors-extensions</strong>/<strong>site-totalbetsforecast</strong>/bootstrap-ex.css</li>
+//     <li>styles/<strong>components</strong>/tabs.css</li>
+//     <li>--- For javascript ---</li>
+//     <li>js/<strong>libs</strong>/<strong>jquery</strong>/jquery-1.11.3.js</li>
+//     <li>js/<strong>libs</strong>/<strong>bootstrap</strong>/tab.js</li>
+// </ul>
+//
+// markup:
+// <ul class="nav nav-tabs" role="tablist">
+//    <li role="presentation" class="active">
+//        <a href="#tabNormal"aria-controls="home" role="tab" data-toggle="tab">Normal</a>
+//    </li>
+//    <li role="presentation" class="">
+//        <a href="#tabOutright" aria-controls="home" role="tab" data-toggle="tab">Outright</a>
+//    </li>
+//    <li role="presentation" class="">
+//        <a href="#tabKeno" aria-controls="home" role="tab" data-toggle="tab">Keno</a>
+//    </li>
+//    <li role="presentation" class="">
+//        <a href="#tabCockfighting" aria-controls="home" role="tab" data-toggle="tab">Cockfighting</a>
+//    </li>
+// </ul>
+//  <div class="tab-content">
+//    <div role="tabpanel" class="tab-pane active" id="tabNormal">...</div>
+//    <div role="tabpanel" class="tab-pane" id="tabOutright">...</div>
+//    <div role="tabpanel" class="tab-pane" id="tabKeno">...</div>
+//    <div role="tabpanel" class="tab-pane" id="tabCockfighting">...</div>
+//  </div>
+//
+// Styleguide 5.8.1
+
+$tab-color: #666;
+
+.nav-tabs > li  {
+    margin-right: 12px;
+}
+
+.nav-tabs > li > a:hover {
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.nav.nav-tabs > li > a {
+    padding: 10px 20px 8px;
+    border: none;
+}
+
+.nav.nav-tabs > li:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    @include transition('width .5s ease, background-color .5s ease');
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    border: none;
+    color: $tab-color;
+    background: transparent;
+}
+
+.nav.nav-tabs > li.active:after, 
+.nav.nav-tabs > li:hover:after {
+    width: 100%;
+    background: $tab-color;
+}
+
+.nav-tabs > li > a {
+    color: $tab-color;
+    font-weight: bold;
+    outline: none;
+}
+
+// Tabs with super level
+//
+// <p>If you want to use this style, please see the following instruction:</p>
+// <ol>   
+//    <li>Please create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and copy only necessary CSS codes for tabs from this file "<strong>styles/vendors/bootstrap.scss</strong>".</li>
+//    <li>Use these more file <strong>"styles/components/tabs.css"</strong>, <strong>"styles/themes/components/tabs/tab-super.css"</li>
+// </ol>
+// <p><strong>For example</strong></p>
+// <ul class="list-unstyled">
+//     <li>styles/<strong>vendors-extensions</strong>/<strong>site-totalbetsforecast</strong>/bootstrap-ex.css</li>
+//     <li>styles/<strong>components</strong>/tabs.css</li>
+//     <li>styles/<strong>themes</strong>/<strong>components</strong>/tabs/tab-super.css</li>
+//     <li>--- For javascript ---</li>
+//     <li>js/<strong>libs</strong>/<strong>jquery</strong>/jquery-1.11.3.js</li>
+//     <li>js/<strong>libs</strong>/<strong>bootstrap</strong>/tab.js</li>
+// </ul>
+//
+// markup:
+// <ul class="nav nav-tabs level-super" role="tablist">
+//    <li role="presentation" class="active">
+//        <a href="#tabNormal3" aria-controls="home" role="tab" data-toggle="tab">Normal</a>
+//    </li>
+//    <li role="presentation" class="">
+//        <a href="#tabOutright3" aria-controls="home" role="tab" data-toggle="tab">Outright</a>
+//    </li>
+//    <li role="presentation" class="">
+//        <a href="#tabKeno3" aria-controls="home" role="tab" data-toggle="tab">Keno</a>
+//    </li>
+//    <li role="presentation" class="">
+//        <a href="#tabCockfighting3" aria-controls="home" role="tab" data-toggle="tab">Cockfighting</a>
+//    </li>
+// </ul>
+//  <div class="tab-content">
+//    <div role="tabpanel" class="tab-pane active" id="tabNormal3">...</div>
+//    <div role="tabpanel" class="tab-pane" id="tabOutright3">...</div>
+//    <div role="tabpanel" class="tab-pane" id="tabKeno3">...</div>
+//    <div role="tabpanel" class="tab-pane" id="tabCockfighting3">...</div>
+//  </div>
+//
+// Styleguide 5.8.2
+
+.level-super {
+    &.nav-tabs > li.active > a, &.nav-tabs > li.active > a:focus,
+    &.nav-tabs > li.active > a:hover, &.nav-tabs > li > a:hover {
+        color: #97141e;
+    }
+
+    &.nav.nav-tabs > li.active:after, 
+    &.nav.nav-tabs > li:hover:after {
+        background: #67151b;
+    }
+
+    &.nav-tabs > li > a {
+        color: #333;
+    }
+}
+
+
+// Tabs with master level
+//
+// <p>If you want to use this style, please see the following instruction:</p>
+// <ul>   
+//    <li>Please create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and copy only necessary CSS codes for tabs from this file "<strong>styles/vendors/bootstrap.scss</strong>".</li>
+//    <li>Use these more file <strong>"styles/components/tabs.css"</strong>, <strong>"styles/themes/components/tabs/tab-master.css"</li>
+// </ul>
+// <p><strong>For example</strong></p>
+// <ul class="list-unstyled">
+//     <li>styles/<strong>vendors-extensions</strong>/<strong>site-totalbetsforecast</strong>/bootstrap-ex.css</li>
+//     <li>styles/<strong>components</strong>/tabs.css</li>
+//     <li>styles/<strong>themes</strong>/<strong>components</strong>/tabs/tab-master.css</li>
+//     <li>--- For javascript ---</li>
+//     <li>js/<strong>libs</strong>/<strong>jquery</strong>/jquery-1.11.3.js</li>
+//     <li>js/<strong>libs</strong>/<strong>bootstrap</strong>/tab.js</li>
+// </ul>
+//
+// markup:
+// <ul class="nav nav-tabs level-master" role="tablist">
+//    <li role="presentation" class="active">
+//        <a href="#tabNormal1" aria-controls="home" role="tab" data-toggle="tab">Normal</a>
+//    </li>
+//    <li role="presentation" class="">
+//        <a href="#tabOutright1" aria-controls="home" role="tab" data-toggle="tab">Outright</a>
+//    </li>
+//    <li role="presentation" class="">
+//        <a href="#tabKeno1" aria-controls="home" role="tab" data-toggle="tab">Keno</a>
+//    </li>
+//    <li role="presentation" class="">
+//        <a href="#tabCockfighting1" aria-controls="home" role="tab" data-toggle="tab">Cockfighting</a>
+//    </li>
+// </ul>
+//  <div class="tab-content">
+//    <div role="tabpanel" class="tab-pane active" id="tabNormal1">...</div>
+//    <div role="tabpanel" class="tab-pane" id="tabOutright2">...</div>
+//    <div role="tabpanel" class="tab-pane" id="tabKeno1">...</div>
+//    <div role="tabpanel" class="tab-pane" id="tabCockfighting1">...</div>
+//  </div>
+//
+// Styleguide 5.8.3
+
+.level-master {
+    &.nav-tabs > li.active > a, &.nav-tabs > li.active > a:focus,
+    &.nav-tabs > li.active > a:hover, &.nav-tabs > li > a:hover {
+        color: #209656;
+    }
+
+    &.nav.nav-tabs > li.active:after, 
+    &.nav.nav-tabs > li:hover:after {
+        background: #276443;
+    }
+
+    &.nav-tabs > li > a {
+        color: #333;
+    }
+}
+
+
+// Tabs with agent level
+//
+// <p>If you want to use this style, please see the following instruction:</p>
+// <ul>   
+//    <li>Please create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and copy only necessary CSS codes for tabs from this file "<strong>styles/vendors/bootstrap.scss</strong>".</li>
+//    <li>Use these more file <strong>"styles/components/tabs.css"</strong>, <strong>"styles/themes/components/tabs/tab-agent.css"</li>
+// </ul>
+// <p><strong>For example</strong></p>
+// <ul class="list-unstyled">
+//     <li>styles/<strong>vendors-extensions</strong>/<strong>site-totalbetsforecast</strong>/bootstrap-ex.css</li>
+//     <li>styles/<strong>components</strong>/tabs.css</li>
+//     <li>styles/<strong>themes</strong>/<strong>components</strong>/tabs/tab-agent.css</li>
+//     <li>--- For javascript ---</li>
+//     <li>js/<strong>libs</strong>/<strong>jquery</strong>/jquery-1.11.3.js</li>
+//     <li>js/<strong>libs</strong>/<strong>bootstrap</strong>/tab.js</li>
+// </ul>
+//
+// markup:
+// <ul class="nav nav-tabs level-agent" role="tablist">
+//    <li role="presentation" class="active">
+//        <a href="#tabNormal2" aria-controls="home" role="tab" data-toggle="tab">Normal</a>
+//    </li>
+//    <li role="presentation" class="">
+//        <a href="#tabOutright2" aria-controls="home" role="tab" data-toggle="tab">Outright</a>
+//    </li>
+//    <li role="presentation" class="">
+//        <a href="#tabKeno2" aria-controls="home" role="tab" data-toggle="tab">Keno</a>
+//    </li>
+//    <li role="presentation" class="">
+//        <a href="#tabCockfighting2" aria-controls="home" role="tab" data-toggle="tab">Cockfighting</a>
+//    </li>
+// </ul>
+//  <div class="tab-content">
+//    <div role="tabpanel" class="tab-pane active" id="tabNormal2">...</div>
+//    <div role="tabpanel" class="tab-pane" id="tabOutright2">...</div>
+//    <div role="tabpanel" class="tab-pane" id="tabKeno2">...</div>
+//    <div role="tabpanel" class="tab-pane" id="tabCockfighting2">...</div>
+//  </div>
+//
+// Styleguide 5.8.4
+
+.level-agent {
+    &.nav-tabs > li.active > a, &.nav-tabs > li.active > a:focus,
+    &.nav-tabs > li.active > a:hover, &.nav-tabs > li > a:hover {
+        color: #2267b6;
+    }
+
+    &.nav.nav-tabs > li.active:after, 
+    &.nav.nav-tabs > li:hover:after {
+        background: #516e8f;
+    }
+
+    &.nav-tabs > li > a {
+        color: #333;
+    }
+}

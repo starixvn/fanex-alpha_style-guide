@@ -1,0 +1,50 @@
+// Selectbox
+//
+// If you want to apply dropdown's styles, please use this file "<strong>styles/components/dropdown.css</strong>"
+//
+// markup:
+// <div class="form-group">
+//    <select>
+//       <option value="0"> Option 1</option>
+//       <option value="1"> Option 2</option>
+//       <option value="2"> Option 3</option>
+//    </select>
+// </div>
+// <div class="form-group">
+//    <select class="hasBorder">
+//       <option value="0"> Option 1</option>
+//       <option value="1"> Option 2</option>
+//       <option value="2"> Option 3</option>
+//    </select>
+// </div>
+// <div class="form-group">
+//    <select class="hasBorder" disabled>
+//       <option value="0"> Option 1</option>
+//       <option value="1"> Option 2</option>
+//       <option value="2"> Option 3</option>
+//    </select>
+// </div>
+//
+// Styleguide 1.4
+
+select {
+    border: none;
+    color: $text-color;
+	height: $height-normal;
+    padding: 4px 8px;
+    @include effect-textbox;
+    @include box-sizing;
+
+    option {
+        padding: 4px;
+    }
+
+    &.hasBorder {
+        border: 1px solid $border-color;
+    }
+
+    &[disabled], .disabled {
+       opacity: .4;
+       cursor: not-allowed;
+    }
+}

@@ -1,0 +1,36 @@
+// Fonts
+//
+// "<strong>Roboto-Regular</strong>" for normal text, and "<strong>Roboto-Medium</strong>" for bold text.
+// <h4 class="guide-title">How to use</h4>
+// <p>If you want to use this font, please use this file "<strong>styles/base/scaffolding.css</strong>"</p>
+//
+// markup:
+// <p>The quick brown fox jumps over the lazy dog.</p>
+// <p class="bold">The quick brown fox jumps over the lazy dog.</p>
+//
+// Styleguide 1.7
+@font-face {
+    font-family: 'Roboto';
+    src:    url('../assets/fonts/roboto/Roboto-Regular.woff2') format("woff2");
+    src:   url('../assets/fonts/roboto/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src:    url('../assets/fonts/roboto/Roboto-Medium.woff2') format("woff2");
+    src:    url('../assets/fonts/roboto/Roboto-Medium.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+p {
+    font-family: Roboto, Arial, Tahoma, sans-serif;
+    font-size: 13px;
+    color: #333;
+}
+
+.bold {
+    font-weight: bold;
+}

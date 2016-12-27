@@ -1,0 +1,169 @@
+// Icons
+//
+// Icons in images and font icon format for all sites
+//
+// Styleguide 1.2
+
+// Favicon
+//
+// markup:
+// <link rel="icon" href="../assets/img/favicon.ico">
+//
+// Styleguide 1.2.1
+
+// Loading icons
+//
+// <ul>
+//    <li>If you want to use these icons, please use this file "<strong>styles/components/blockui.css</strong>".</li>
+//    <li>Additional classes can be added to your icons to change its size and shape.</li>
+// <ul>
+//
+// markup:
+// <ul class="list-unstyled">
+//    <li><span class="icon-loading-small"></span></li>
+//    <li><span class="icon-loading-large"></span></li>
+// </ul>
+//
+// Styleguide 1.2.2
+
+.icon-loading-small {
+    background: url('../assets/img/ajax-loader.gif') no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+
+.icon-loading-large {
+    background: url('../assets/img/loader3.gif') no-repeat;
+    display: inline-block;
+    width: 54px;
+    height: 55px;
+}
+
+// Image icons
+//
+// If you want to use these icons, please use this file "<strong>styles/components/icons.css</strong>".
+//
+// markup:
+// <ul class="list-unstyled">
+//    <li><span class="langFlag-en-us"></span></li>
+//    <li><span class="langFlag-zh-tw"></span></li>
+//    <li><span class="langFlag-zh-cn"></span></li>
+//    <li><span class="langFlag-zh-tw"></span></li>
+//    <li><span class="langFlag-ko-kr"></span></li>
+//    <li><span class="langFlag-th-th"></span></li>
+//    <li><span class="langFlag-ja-jp"></span></li>
+//    <li><span class="langFlag-zh-tw"></span></li>
+//    <li><span class="langFlag-vi-vn"></span></li>
+//    <li><span class="bkgDcommAllowed-large"></span></li>
+//    <li><span class="bkgDcommDisallowed-large"></span></li>
+//    <li><span class="bkgDcommAllowed-small"></span></li>
+//    <li><span class="bkgDcommDisallowed-small"></span></li>
+//    <li><span class="icon-user-default"></span></li>
+// </ul>
+//
+// Styleguide 1.2.3
+
+%icon-flag {
+    background: url("../assets/img/flag.png");
+    content: '';
+    display: inline-block;
+    background-size: 32px 36px;
+    width: 16px;
+    height: 12px;
+}
+
+.langFlag-en-us {
+    @extend %icon-flag;
+    background-position: -16px -24px;
+}
+
+.langFlag-zh-tw {
+    @extend %icon-flag;
+    background-position: 0 -12px;
+}
+
+.langFlag-zh-cn {
+    @extend %icon-flag;
+    background-position: 0 -12px;
+}
+
+.langFlag-ko-kr {
+    @extend %icon-flag;
+    background-position: -16px 0;
+}
+
+.langFlag-th-th {
+    @extend %icon-flag;
+    background-position: -16px -12px;
+}
+
+.langFlag-ja-jp {
+    @extend %icon-flag;
+    background-position: 0 0;
+}
+
+.langFlag-vi-vn {
+    @extend %icon-flag;
+    background-position: 0 -24px;
+}
+
+.bkgDcommAllowed-large, .bkgDcommDisallowed-large {
+    background: url('../assets/img/switch.png') no-repeat;
+    width: 81px;
+    height: 20px;
+    display: inline-block;
+}
+
+.bkgDcommDisallowed-large {
+    background-position: 0 -31px;
+}
+
+.bkgDcommAllowed-small, .bkgDcommDisallowed-small {
+    background: url('../assets/img/switch_mem.png') no-repeat;
+    width: 54px;
+    height: 20px;
+    display: inline-block;
+}
+
+.bkgDcommDisallowed-small {
+    background-position: 0 -25px;
+}
+
+.icon-user-default {
+    background: url('../assets/img/icon_user_default.png') no-repeat;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+}
+
+// Font icons
+//
+// Alpha's icon provides basic and necessary icons for microsite. Full version can be accessed <a href="/assets/fonts/iconalpha/demo.html" title="Alpha icon" target="_blank"><strong>here</strong></a>.
+//
+// <h4 class="guide-title">How to use</h4>
+//
+// Please see the following instruction:
+// <ul>
+//    <li><strong>Option 1:</strong> Use this file "<strong>styles/fonts/iconalpha/styles.css</strong>".</li>
+//    <li><strong>Option 2:</strong> If you want to use the <code>@font-face</code> rules, please use this file "<strong>styles/base/icon-font.css<strong>"</p>
+//   </li>
+// </ul>
+//
+// markup:
+// <ul class="list-unstyled">
+//    <li><span class="icon-reports"></span></li>
+//    <li><span class="icon-memberinfo"></span></li>
+//    <li><span class="icon-betsandforecast"></span></li>
+//    <li><span class="icon-totalbets"></span></li>
+//    <li><span class="icon-forecast"></span></li>
+//    <li>...</li>
+// </ul>
+//
+// Styleguide 1.2.4
+
+// styleguide:ignore:start
+[class^="icon-"] {
+    font-size: 20px;
+}
+// styleguide:ignore:end

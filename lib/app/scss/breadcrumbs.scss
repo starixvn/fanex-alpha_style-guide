@@ -1,0 +1,46 @@
+﻿// Breadcrumbs
+//
+// <p><a href="http://getbootstrap.com/components/#breadcrumbs" target="_blank"><strong>Breadcrumbs</strong></a> indicate the <strong>current page's location</strong> within a navigational hierarchy. <strong>Separators</strong> are automatically added in CSS through <code>:before</code> and <code>content</code>.</p>
+// <h4 class="guide-title">How to use</h4>
+// <p>If you want to use this style, please see the following instruction:</p>
+// <ul>   
+//    <li>Please create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and copy only necessary CSS codes for breadcrumbs from this file "<strong>styles/vendors/bootstrap.scss</strong>".</li>
+//    <li>Add more file <strong>"styles/components/breadcrumbs.css"</strong></li>
+// </ul>
+// <p><strong>For example</strong></p>
+// <ul class="list-unstyled">
+//     <li>styles/<strong>vendors-extensions</strong>/<strong>site-totalbetsforecast</strong>/bootstrap-ex.css</li>
+//     <li>styles/<strong>components</strong>/breadcrumbs.css</li>
+// </ul>
+//
+// markup:
+// <ul class="breadcrumb">
+//     <li>Bets &amp; Forecast</li>
+//     <li> Soccer
+//         <span class="help" data-toggle="modal" data-target="#helpModal" title="Help"></span>
+//     </li>
+// </ul>
+//
+// Styleguide 5.10
+
+.breadcrumb {
+    background: none;
+    border-bottom: 1px solid #cecece;
+    border-radius: 0;
+    overflow: hidden;
+    padding: 10px 0 5px;
+    margin: 0;    
+
+    li {
+        color: #9d1c1c;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: relative;
+
+        + li:before {
+            content: '\276F';
+            color: #333;
+            padding: 0 8px;
+        }
+    }
+}

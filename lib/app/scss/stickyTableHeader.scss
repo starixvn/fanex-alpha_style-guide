@@ -1,0 +1,366 @@
+﻿// StickyTableHeaders
+//
+// The <a href="https://github.com/jmosbech/StickyTableHeaders" target="_blank"><strong>StickyTableHeaders</strong></a> jQuery plugin to the table, the column headers will stick to the top of the viewport as you scroll down.
+// <h4 class="guide-title">How to use</h4>
+// <p>If you want to apply this style, please use these following files:
+// <ul>
+//     <li>js/<strong>components</strong>/<strong>sticky-table-headers</strong>/jquery.stickytableheaders.js</li>
+// </ul>
+// <a href='http://10.19.10.95:3000/section/5.14/fullscreen' target="_blank"><strong>Click here to view StickyTableHeaders demo</strong></a>
+//
+// markup:
+// <div sg-stickytableheader class="">
+//  <ul id="tabs-message" class="nav nav-tabs" role="tablist">
+//      <li role="presentation" class="active">
+//          <a href="#">Setting</a>
+//      </li>
+//      <li role="presentation" class="">
+//          <a href="#">Status</a>
+//      </li>
+//      <li role="presentation" class="">
+//          <a href="#">Credit</a>
+//      </li>
+//      <li role="presentation" class="">
+//          <a href="#">Login</a>
+//      </li>
+//  </ul>
+// <div class="tab-content" id="content-message">
+//    <div role="tabpanel" class="tab-pane active" id="tabNormal">
+//    <table class="tblRpt tblRpt-bordered tblRpt-striped tblRpt-hover" id="message-data">
+//     <thead>
+//         <tr>
+//             <th class="col-order">#</th>
+//             <th>Message</th>
+//         </tr>
+//     </thead>
+//     <tbody>
+//             <tr>
+//             <td class="col-order">1</td>
+//             <td>
+//                 <div class="row-first">1/19/2016 9:42:13 AM<span class="messageId">1073745435</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">2</td>
+//             <td>
+//                 <div class="row-first">1/19/2016 9:40:50 AM<span class="messageId">1073745434</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">3</td>
+//             <td>
+//                 <div class="row-first">1/19/2016 9:40:12 AM<span class="messageId">1073745433</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">4</td>
+//             <td>
+//                 <div class="row-first">1/19/2016 9:27:49 AM<span class="messageId">1073745432</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">5</td>
+//             <td>
+//                 <div class="row-first">1/18/2016 3:25:23 PM<span class="messageId">1073745426</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">6</td>
+//             <td>
+//                 <div class="row-first">1/18/2016 3:22:58 PM<span class="messageId">1073745425</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">7</td>
+//             <td>
+//                 <div class="row-first">1/18/2016 3:12:48 PM<span class="messageId">1073745424</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">8</td>
+//             <td>
+//                 <div class="row-first">1/18/2016 3:10:45 PM<span class="messageId">1073745423</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">9</td>
+//             <td>
+//                 <div class="row-first">1/18/2016 3:05:09 PM<span class="messageId">1073745422</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">10</td>
+//             <td>
+//                 <div class="row-first">1/18/2016 2:14:37 PM<span class="messageId">1073745421</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">11</td>
+//             <td>
+//                 <div class="row-first">1/18/2016 1:31:26 PM<span class="messageId">1073745417</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">12</td>
+//             <td>
+//                 <div class="row-first">1/15/2016 1:35:12 PM<span class="messageId">1073745408</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">13</td>
+//             <td>
+//                 <div class="row-first">1/15/2016 1:31:55 PM<span class="messageId">1073745407</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">14</td>
+//             <td>
+//                 <div class="row-first">1/14/2016 5:07:01 PM<span class="messageId">1073745405</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">15</td>
+//             <td>
+//                 <div class="row-first">1/14/2016 4:36:09 PM<span class="messageId">1073745404</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">16</td>
+//             <td>
+//                 <div class="row-first">1/14/2016 4:34:30 PM<span class="messageId">1073745403</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">17</td>
+//             <td>
+//                 <div class="row-first">1/14/2016 4:31:19 PM<span class="messageId">1073745402</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">18</td>
+//             <td>
+//                 <div class="row-first">1/14/2016 4:29:43 PM<span class="messageId">1073745401</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">19</td>
+//             <td>
+//                 <div class="row-first">1/14/2016 4:28:06 PM<span class="messageId">1073745400</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">20</td>
+//             <td>
+//                 <div class="row-first">1/14/2016 3:52:46 PM<span class="messageId">1073745399</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">21</td>
+//             <td>
+//                 <div class="row-first">1/14/2016 3:06:56 PM<span class="messageId">1073745398</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">22</td>
+//             <td>
+//                 <div class="row-first">1/14/2016 2:57:22 PM<span class="messageId">1073745397</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">23</td>
+//             <td>
+//                 <div class="row-first">1/14/2016 2:55:18 PM<span class="messageId">1073745396</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">24</td>
+//             <td>
+//                 <div class="row-first">1/13/2016 9:27:25 AM<span class="messageId">1073745391</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">25</td>
+//             <td>
+//                 <div class="row-first">1/12/2016 4:34:13 PM<span class="messageId">1073745390</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">26</td>
+//             <td>
+//                 <div class="row-first">1/12/2016 2:05:00 PM<span class="messageId">1073745389</span></div>
+//                 <div class="message-content ">Dear valued customer, a member under your line had won a Colossus Bet prize. You will receive part of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">27</td>
+//             <td>
+//                 <div class="row-first">1/11/2016 1:29:59 PM<span class="messageId">1073745388</span></div>
+//                 <div class="message-content ">Dear value customer, a member under your line had won a Colossus Bet prize. You will receive 10% of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">28</td>
+//             <td>
+//                 <div class="row-first">1/8/2016 5:05:02 PM<span class="messageId">1073745387</span></div>
+//                 <div class="message-content ">Dear value customer, a member under your line had won a Colossus Bet prize. You will receive 10% of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">29</td>
+//             <td>
+//                 <div class="row-first">1/8/2016 4:56:07 PM<span class="messageId">1073745386</span></div>
+//                 <div class="message-content ">Dear value customer, a member under your line had won a Colossus Bet prize. You will receive 10% of the prize as winning share.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">30</td>
+//             <td>
+//                 <div class="row-first">2/24/2014 9:41:00 AM<span class="messageId">2470</span></div>
+//                 <div class="message-content text-red">Dear Valued Customer: Company will not be held responsible for any typing  technical  or human error in posting odds and/or handicaps. In the event of error  company reserves the right to either void any affected bets or correct the error even after the events settlement had been completed.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">31</td>
+//             <td>
+//                 <div class="row-first">4/26/2012 9:00:00 AM<span class="messageId">23551</span></div>
+//                 <div class="message-content ">test_long_message_test_long_message_test_long_message_test_long_message_test_long_message_test_long_message_test_long_message_test_long_message_test_long_message</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">32</td>
+//             <td>
+//                 <div class="row-first">4/26/2012 2:15:00 AM<span class="messageId">6399</span></div>
+//                 <div class="message-content ">Dear Valued Customers :[Contact] At the following time  01/04/2009 (Wednesday) from 11:00am - 12:00pm (GMT +8)  we will be implementing mail server upgrades. During this period of time  our emailing system will be inaccessible and members are advised to drop your enquiries or concerns via our SKYPE or Customer Care Hotlines. We apologize on all troubles caused!!</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">33</td>
+//             <td>
+//                 <div class="row-first">4/25/2012 11:31:00 PM<span class="messageId">231648</span></div>
+//                 <div class="message-content ">Dear Valued Customers: [Politics] are available now. Kindly click on the "Politics" event to place your bets now. For more information about this new product  please refer to our Rules &amp; Regulations clause: 3.31. Thank you!  Casey2	</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">33</td>
+//             <td>
+//                 <div class="row-first">4/25/2012 11:31:00 PM<span class="messageId">1073774893</span></div>
+//                 <div class="message-content ">&lt;font color=green&gt;English Special Announcement</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">34</td>
+//             <td>
+//                 <div class="row-first">4/25/2012 3:18:00 AM<span class="messageId">5521</span></div>
+//                 <div class="message-content ">Dear valued customer:  It is safe to have a unique password for your account. Our company would like to take this opportunity to remind our valued customers change your password frequently to keep your account safe. Thank you.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">35</td>
+//             <td>
+//                 <div class="row-first">4/24/2012 2:14:00 AM<span class="messageId">132158</span></div>
+//                 <div class="message-content "> 	Dear Valued Customer: [Rules and Regulations] Kindly be informed that effective from today [18/10/2010  Monday] onwards  we have amended our Live Betting rules  please refer to Clause 3.1.9 for more details. Thank you!  </div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">36</td>
+//             <td>
+//                 <div class="row-first">11/24/2008 9:21:00 AM<span class="messageId">5307</span></div>
+//                 <div class="message-content text-red">Dear Valued Customer: [Rules and Regulations] Kindly be informed that effective from today [24/11/2008  Monday] onward  we have amended our Live Betting rules  please feel free to check out for your understanding. Thank you.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">37</td>
+//             <td>
+//                 <div class="row-first">11/7/2008 8:26:00 AM<span class="messageId">5130</span></div>
+//                 <div class="message-content text-red">Dear Valued Customer: [Rules and Regulations] Kindly be informed that effective from today [7/11/2008  Friday] onward  we have amended our Result &amp; Total corners rules  please feel free to check out for your understanding. Thank you.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">38</td>
+//             <td>
+//                 <div class="row-first">10/23/2008 2:27:00 PM<span class="messageId">4946</span></div>
+//                 <div class="message-content text-red">To Our valued member/customers: we are not associated with any other website other than http://www.ibcbet.com We advise that you check with us to avoid any misunderstanding or fraud perpetuated on you with regard to any websites that claim to be associated with or related to IBCBET.com.We advice strongly not to deal with third parties claiming to be agents/affiliates of our company in gaming forums  chat rooms or websites or to follow solicitation regarding sign up bonuses; such postings and solicitations are not approved by our company  we do not allow such activities by agents/affiliates.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">39</td>
+//             <td>
+//                 <div class="row-first">9/4/2008 4:02:00 PM<span class="messageId">4280</span></div>
+//                 <div class="message-content text-red">Dear valued Customer: [American Football] kindly be informed that with effective from 4/9/2008 (Thursday) we have amended our "American Football Rules &amp; Regulation" Please feel free to check it out for your understading. Thank you!!</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">40</td>
+//             <td>
+//                 <div class="row-first">8/15/2008 2:08:00 PM<span class="messageId">4044</span></div>
+//                 <div class="message-content text-red">Customers who are using proxy IP please take notice: Installation of proxy softwares and usage of proxy services will expose your account information to intruders. If you choose to continue using proxy IP please do so at your own risk. Our company will not be held liable for any damage/losses incurred by your decision.</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">41</td>
+//             <td>
+//                 <div class="row-first">8/12/2008 9:20:00 PM<span class="messageId">3999</span></div>
+//                 <div class="message-content text-red">Attn:[Notice] Dear All Valued Customers : Please note that for "Badminton"  "Volleyball"  "Beach Volleyball"  bets placed for Money Line and Handicap markets refer to the number of sets. Over/Under and Odd/Even markets refer to the number of points.  Please check Olympic Games Rules &amp; Regualations for all the details.Thank you!!</div>
+//             </td>
+//         </tr>
+//         <tr>
+//             <td class="col-order">42</td>
+//             <td>
+//                 <div class="row-first">3/19/2008 8:46:00 AM<span class="messageId">2823</span></div>
+//                 <div class="message-content text-red">Attn: Our Company reserves the right to refuse/reject and suspend without prior notification any Customer who is suspected of cheating  hacking  attacking  manipulating or damaging the Operator’s normal betting operations (including the Internet Betting Service). Any of the “abnormal bets” will be VOID without prior notification. The use of artificial intelligence or "bots" on the Internet Betting Service is strictly forbidden. Our company will take measures to prevent and detect the use of programs that are designed to enable artificial intelligence (non-humans) to utilize the Website. Any attempted or actual use of artificial intelligence by the Customer will lead to termination of their Account or Voiding the bets  at the discretion of our company.</div>
+//             </td>
+//         </tr>
+//     </tbody>
+// </table>
+// </div>
+// </div>
+// </div>
+//
+// sg-angular-directive:
+// name: sgStickytableheader
+// file: js/styleguide/components/sticky-table-headers/jquery.stickytableheaders.js
+// file: js/styleguide/initializeStickyTableHeader.js
+//
+// Styleguide 5.14
+
+#tabs-message {
+    background: #f4f4f4;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+}
+
+#content-message {
+    margin-top: 50px;
+
+    .tblRpt {
+        table-layout: fixed;
+        width: 100%;
+    }
+}

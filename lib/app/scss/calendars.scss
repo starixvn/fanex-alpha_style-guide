@@ -1,0 +1,288 @@
+﻿// Calendar
+//
+// Using <a href="http://eonasdan.github.io/bootstrap-datetimepicker/" target="_blank"><strong>Bootstrap 3 Datepicker</strong></a> for calendar format.
+// <p>If you want to apply this style, please see the following instruction:</p>
+// <ul>
+//     <li>Create a proper folder (the folder name is a site name which you are working on) inside this folder "<strong>styles/vendors-extensions</strong>" and <br> copy only necessary CSS codes for calendar from this file "<strong>styles/vendors/bootstrap.scss</strong>"</li>
+//     <li>Use these files "<strong>styles/vendors/bootstrap-datetimepicker.css</strong>" and "<strong>styles/components/calendars.css</strong>" (which is appropriately customized for this current style)</li>
+// </ul>
+// <p><strong>For example</strong></p> 
+// <ul class="list-unstyled">
+//     <li>styles/vendors-extensions/<strong>site-main</strong>/bootstrap-ex.scss</li>
+//     <li>styles/<strong>vendors</strong>/bootstrap-datetimepicker.css</li>
+//     <li>styles/components/<strong>calendars.css</strong></li>
+//     <li><strong>---For javascipt---</strong></li>
+//     <li>js/<strong>libs</strong>/moment/moment.js</li>
+//     <li>js/components/<strong>datetimepicker</strong>/datepicker.js</li>
+//     <li>js/components/<strong>datetimepicker</strong>/bootstrap-datetimepicker.js</li>
+// </ul>
+//
+// markup:
+// <div sg-form-datepicker>
+//     <form class="filter-dateTimePicker">
+//         <div class="col-sm-12 main-option">
+//             <div class="form-group">
+//                 <label class="txt">Date</label>
+//                 <div class="control date">
+//                     <div class="input-group date" id="dpkContainer1">
+//                         <input class="form-control" id="datetime" name="ResultDate" type="text" value="07/18/2016" />
+//                         <span class="input-group-addon">
+//                             <span class="icon-calendar"></span>
+//                         </span>
+//                     </div>
+//                 </div>
+//             </div>
+//         </div>
+//     </form>
+//</div>
+//
+// sg-angular-directive:
+// name: sgFormDatepicker
+// file: js/styleguide/components/moment/moment.js
+// file: js/styleguide/components/datetimepicker/datepicker.js
+// file: js/styleguide/components/datetimepicker/bootstrap-datetimepicker.js
+// file: js/styleguide/formDatepicker.js
+//
+// Styleguide 5.1
+
+// styleguide:ignore:start
+.filter-dateTimePicker {
+    display: inline-block;  
+    margin: 280px 0;
+    width: 300px;
+}
+// styleguide:ignore:end
+
+.control {
+    display: inline-block;
+    width: 200px;
+    vertical-align: middle;
+    margin: 0 8px 0 5px;
+
+    &.date {
+        width: 130px;
+    }
+}
+
+.input-group.date {
+    .icon-calendar {
+        font-size: 24px;
+        color: #7f7f7f;
+        display: inline-block;
+        @include ripple-effect-icon($margin-left: -6px, $height: 36px, $width: 36px, $top: -2px);
+    }
+
+    .input-group-addon {
+        background: transparent;
+        border: none;
+        padding: 0px 8px;
+        position: relative;
+        top: 3px;
+    }
+
+    .form-control {        
+        border: none;
+        font-size: 12px;
+        height: 28px;
+        background: #fff;
+        @include effect-textbox;
+    }
+}
+
+.bootstrap-datetimepicker-widget {
+    border: 1px solid $border-color;
+    font-family: $font-family;
+    @include effect-normal;
+
+    %ripple-effect {
+        position: relative;
+        @include border-radius(50%);
+
+        &.active {
+            background-color: #337AB7;
+            color: #fff;
+            text-shadow: none;
+            padding: 3px 1px;
+            @include border-radius(50%);
+
+            &:before {
+                display: none;
+            }
+
+            &:hover:after {
+                animation: none;
+            }
+
+            &.today {
+                color: #fff;
+
+                &:hover {
+                    background-color: #337AB7;
+                    @include border-radius(50%);
+                }
+            }
+        }
+
+        &.disabled {
+            &:before {
+                display: none;
+            }
+
+            &:hover:after {
+                animation: none;
+            }
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            position: relative;
+        }
+
+        &:hover {
+            &:after {
+                animation: 1s ease-out 0s normal 1 ripple;
+                background: #337AB7; 
+                left: 0;
+                opacity: 1;
+                position: absolute;
+                transform: scale(0);
+                top: 0;
+                right: 0;
+                bottom: 0;
+                @include border-radius(50%);
+            }
+        }
+    }
+
+    .datepicker-days {
+        table thead tr:first-child th:hover {
+          background: none;
+        }
+
+        table th {        
+            &.picker-switch {
+                height: 36px;
+                line-height: 36px;
+                color: #3e3e3e;
+            }
+
+            &.dow {            
+                color: #9e9e9e;
+                font-weight: normal;
+            }
+
+            .glyphicon {
+                font-family: 'Iconalpha' !important;
+                font-size: 24px;
+
+                &.glyphicon-chevron-left:before {
+                    content: '\e93f';
+                    line-height: 36px;
+                }
+
+                &.glyphicon-chevron-right:before {
+                    content: '\e942';
+                    line-height: 36px;
+                }
+            }
+
+            &.prev {
+                color: #757575;
+            }
+        }
+
+        table td.day {
+            height: 30px;
+            line-height: 30px;
+            color: #000;
+            width: 30px;
+            transition: all 0.3s ease;  
+            @include border-radius(50%);
+        }
+
+        .table-condensed>thead>tr>th, .table-condensed>tbody>tr>th, 
+        .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td,
+        .table-condensed>tbody>tr>td, .table-condensed>tfoot>tr>td {
+            padding: 3px 1px;
+        }
+        
+        .table-condensed {
+            border-collapse: separate;
+        }
+
+        .table-condensed > tbody > tr > td {
+            color: #4c5246;
+            font-size: 13px;
+            @extend %ripple-effect;
+
+            &.disabled {
+                color: #c7c7c7;
+
+                &:before {
+                    display: none;
+                }
+            }
+
+            &.today {
+                color: #2491ef;
+                &:before {
+                    display: none;
+                }
+
+                &:hover {
+                    background: none;
+                }
+            }
+        }
+    }      
+    
+    table td {
+        &.day:hover, &.hour:hover, &.minute:hover, &.second:hover {
+            background: none;
+        }
+
+        span {
+            &.month, &.year, &.decade {
+                @extend %ripple-effect;
+            }
+            &:hover {
+                background: none;
+            }
+        }        
+    }
+    
+    @keyframes ripple {
+        0% {
+            transform: scale(0);
+        }
+
+        20% {
+            transform: scale(1);
+        }
+
+        100% {
+            opacity: 0;
+            transform: scale(1);
+        }
+    }
+
+}
+
+// For mobile
+$screen-device-lower768: 767px;
+
+@media only screen and (max-device-width : $conent-device-lower768) {
+    .input-group.date {
+        .form-control {
+            height: 36px;
+            @include box-shadow-multiple('0px 1px 3px rgba(0, 0, 0, 0.3)');                
+        }
+
+        .icon-calendar {
+            font-size: 26px;
+            @include ripple-effect-icon($margin-left: -7px, $height: 40px, $width: 40px, $top: -4px);
+        }
+    }
+}
+

@@ -1,0 +1,35 @@
+﻿// BlockUI
+//
+// The <a href="http://malsup.com/jquery/block/" target="_blank"><strong>jQuery BlockUI Plugin</strong></a> lets you simulate synchronous behavior when using AJAX, without locking the browser.<br> When <strong>activated</strong>, it will <strong>prevent user activity</strong> with the page (or part of the page) <strong>until it is deactivated</strong>. <br><strong>BlockUI adds elements to the DOM</strong> to give it both the appearance and behavior of blocking user interaction.
+// <h4 class="guide-title">How to use</h4>
+// <p>If you want to apply this style, please use these following files:
+// <ul>
+//     <li>styles/<strong>components</strong>/blockui.css</li>
+//     <li>--- For javacript ---</li>
+//     <li>js/<strong>libs</strong>/<strong>jquery</strong>/jquery-1.11.3.js</li>
+//     <li>js/<strong>components</strong>/<strong>blockui</strong>/jquery.blockUI.js</li>
+// </ul>
+// 
+// markup:
+// <div sg-customize-blockui class="blockUI-demo">
+//   <button type="button" id="runBlockUI" class="btn btn-submit">blockUI</button>
+// </div>
+//
+// sg-angular-directive:
+// name: sgDemoblockui
+// file: js/styleguide/components/blockui/jquery.blockUI.js
+// file: js/styleguide/initializeBlockUI.js
+//
+// Styleguide 5.13
+
+.blockOverlay {
+    background: #fff;
+    opacity: 0.6;
+}
+
+.blockMsg {
+    width: 100px;
+    height: 100px;
+    background: url(assets/img/ajax-loader.gif) center center no-repeat;
+    left: 47% !important;
+}

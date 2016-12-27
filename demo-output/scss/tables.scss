@@ -1,0 +1,613 @@
+// Tables
+//
+// Styleguide 3.0
+
+// Basic table
+//
+// Styleguide 3.1
+
+// Table 1
+//
+// <p>If you want to use this style, please use this file <strong>"styles/components/tables.css"</strong></p>
+//
+// markup:
+// <table class="tblRpt tblRpt-bordered width-100per">
+//   <thead>
+//    <tr>
+//      <th>Log ID</th>
+//      <th>Log Date</th>
+//      <th>Edited by</th>
+//      <th>Action</th>
+//      <th>Details</th>
+//    </tr>
+//   </thead>
+//   <tbody>
+//      <tr class="noInfo">
+//         <td colspan="8">No information is available</td>
+//      </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 3.1.1
+
+$table-red-color: #B50000;
+$table-td-hover-color: #f8eb95;
+$table-border-color: #d1d1d1;
+$table-header-bg-color: #666;
+$table-header-color: #fff;
+$table-subheader-bg-color: #3f3f3f;
+$table-subheader-color: #fff;
+$table-odd-bg: #eae9ee;
+$table-even-bg: #fff;
+$table-footer-bg: #7f3d1d;
+$table-footer-color: #fff;
+
+.width-100per {
+    width: 100%;
+}
+
+.tblRpt {
+    border: 1px solid $table-border-color;
+    border-collapse: collapse;
+    background-color: #fff;
+
+    &.tblRpt-bordered {
+        thead th, tbody td, tfoot td {
+            border: 1px solid $table-border-color;
+        }
+    }
+
+    thead th, tbody td, tfoot td  {
+        height: $height-normal;
+        padding: 4px 8px;
+        white-space: nowrap;
+        vertical-align: middle;
+        @include box-sizing;
+    }
+
+    thead th {
+        background-color: $table-header-bg-color;
+        color: $table-header-color;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .thead-row2 th {
+        background-color: $table-subheader-bg-color;
+        color: $table-subheader-color;
+    }
+
+    .noInfo {
+        background-color: #fff !important;
+        text-align: center;
+    }
+}
+
+// Table 2
+//
+// <p>If you want to use this style for table with <strong>total</strong> row, please use this file <strong>"styles/components/tables.css"</strong></p>
+//
+// markup:
+// <table class="tblRpt tblRpt-bordered tblRpt-striped tblRpt-hover">
+//   <thead>
+//    <tr>
+//      <th class=width80" rowspan="2">Username</th>
+//      <th class="width80" rowspan="2">No. of Ticket</th>
+//      <th class="width80" rowspan="2">Turnover</th>
+//      <th class="width80" rowspan="2">Gross Comm</th>
+//      <th colspan="3">Member</th>
+//      <th colspan="3">Agent</th>
+//      <th colspan="3">Master</th>
+//      <th colspan="3">Super</th>
+//      <th width60" rowspan="2">Company</th>
+//    </tr>
+//  <tr class="thead-row2">
+//      <th class="width40" >Win/Loss</th>
+//      <th class="width40">Comm</th>
+//      <th class="width40">Total</th>
+//      <th class="width40" >Win/Loss</th>
+//      <th class="width40">Comm</th>
+//      <th class="width40">Total</th>
+//      <th class="width40">Win/Loss</th>
+//      <th class="width40">Comm</th>
+//      <th class="width40">Total</th>
+//      <th class="width40">Win/Loss</th>
+//      <th class="width40">Comm</th>
+//      <th class="width40">Total</th>
+//    </tr>
+//   </thead>
+//   <tbody>
+//      <tr class="text-right">
+//         <td class="text-left">master1</td>
+//         <td>1982</td>
+//         <td>1,621,939.08</td>
+//         <td>5,864.93</td>
+//         <td>28,067.19</td>
+//         <td>192,753.74</td>
+//         <td class="bold">1,518.83</td>
+//         <td>194,272.57</td>
+//         <td>-38,753.29</td>
+//         <td class="bold">-37,260.99</td>
+//         <td>-50,127.50</td>
+//         <td>-695.74</td>
+//         <td class="bold">-50,823.24	</td>
+//         <td>-37,938.44</td>
+//         <td>-666.23</td>
+//         <td class="bold">-38,604.66</td>
+//         <td>-67,583.68</td>
+//      </tr>
+//      <tr class="text-right">
+//         <td class="text-left">SUPERTEST101</td>
+//         <td>2</td>
+//         <td>434.60</td>
+//         <td>4.35	</td>
+//         <td>-149.60</td>
+//         <td>0.00</td>
+//         <td class="bold">-149.60</td>
+//         <td>1.50</td>
+//         <td>0.22</td>
+//         <td class="bold">1.71</td>
+//         <td>97.24</td>
+//         <td>1.19</td>
+//         <td class="bold">98.43</td>
+//         <td>13.46</td>
+//         <td>-0.32</td>
+//         <td class="bold">13.15</td>
+//         <td>36.31</td>
+//      </tr>
+//      <tr class="text-right">
+//         <td class="text-left">supertest1ZZ</td>
+//         <td>21</td>
+//         <td>1,750.00</td>
+//         <td>9.94</td>
+//         <td>-3.61</td>
+//         <td>4.34</td>
+//         <td class="bold">0.73</td>
+//         <td>0.00</td>
+//         <td>0.00</td>
+//         <td class="bold">0.00</td>
+//         <td>0.00</td>
+//         <td>0.00</td>
+//         <td class="bold">0.00</td>
+//         <td>126.06</td>
+//         <td>1.92</td>
+//         <td class="bold">127.98</td>
+//         <td>-128.71</td>
+//      </tr>
+//   </tbody>
+//   <tfoot>
+//      <tr class="tbl-footer text-right">
+//         <td class="text-left">Total</td>
+//         <td>2005</td>
+//         <td>1,624,123.68</td>
+//         <td>5,879.22</td>
+//         <td>192,600.53</td>
+//         <td>1,523.17</td>
+//         <td>194,123.70</td>
+//         <td class="altercol">-38,751.80</td>
+//         <td class="altercol">1,492.52</td>
+//         <td class="altercol">-37,259.27</td>
+//         <td>-50,030.26</td>
+//         <td>-694.55</td>
+//         <td>-50,724.81</td>
+//         <td class="altercol">-37,798.91</td>
+//         <td class="altercol">-664.63</td>
+//         <td class="altercol">-38,463.54</td>
+//         <td>-67,676.07</td>
+//      </tr>
+//   </tfoot>
+// </table>
+//
+// Styleguide 3.1.2
+
+.width60 {
+    width: 60px;
+}
+.width80 {
+    width: 80px;
+}
+.width40 {
+    width: 40px;
+}
+
+.tblRpt {
+    &.tblRpt-striped {
+        tbody {
+            > tr:nth-of-type(2n+1) {
+                background-color: $table-odd-bg;
+            }
+        }   
+    }
+
+    &.tblRpt-hover {
+        tbody {
+            tr:hover td {
+                background-color: $table-td-hover-color;
+            }
+        }
+    }    
+
+    .tbl-footer {
+        background-color: $table-footer-bg;
+        color: $table-footer-color;
+        font-weight: 700;
+
+        .altercol {
+            background-color: #432616;
+        }
+    }
+}
+
+// Special table
+//
+// Styleguide 3.2
+
+// Table 1
+//
+// If you want to apply this style, please use this file <strong>"styles/components/tables.css"</strong></p>
+//
+// markup:
+// <table class="tblRpt tblRpt-bordered tblRpt-striped width-100per">
+//   <thead>
+//    <tr class="thead-row">
+//      <th class=width120">Kick Off.Time</th>
+//      <th>Match</th>
+//      <th class="width120">HT Score</th>
+//      <th class="width120">Final Score</th>
+//      <th class="width120">Status</th>
+//    </tr>
+//   </thead>
+//   <tbody>
+//      <tr>
+//          <td colspan="5" class="group-league">*English premier league</td>
+//      </tr>
+//      <tr>
+//         <td class="text-center width120" rowspan="2">12/26/2015 <br/> 08:45:00 AM</td>
+//         <td class="text-left">Stoke City</td>
+//         <td class="text-center">2</td>
+//         <td class="text-center">2</td>
+//         <td rowspan="2" class="text-center width120">Complete</br>[1]</td>
+//      </tr>
+//      <tr>
+//         <td class="text-left">Manchester United</td>
+//         <td class="text-center">0</td>
+//         <td class="text-center">0</td>
+//      </tr>
+//      <tr>
+//         <td class="text-center width120" rowspan="2">12/26/2015 <br/> 08:45:00 AM</td>
+//         <td class="text-left">Aston Villa</td>
+//         <td class="text-center">2</td>
+//         <td class="text-center">2</td>
+//         <td rowspan="2" class="text-center width120">Complete</br>[1]</td>
+//      </tr>
+//      <tr>
+//         <td class="text-left">West Ham United</td>
+//         <td class="text-center">1</td>
+//         <td class="text-center">1</td>
+//      </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 3.2.1
+
+.width120 {
+    width: 120px;
+}
+
+.tblRpt {     
+    tbody {
+        td {
+            &.text-center {
+                text-align: center;
+            }
+            &.group-league {
+                background: #f4f5e0;
+                text-transform: uppercase;
+                color: $text-color;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+    }
+}
+
+// Table 2
+//
+// If you want to apply this style, please use this file <strong>"styles/components/tables.css"</strong></p>
+//
+// markup:
+// <table class="tblRpt tblRpt-bordered tblRpt-striped width-100per">
+//   <thead>
+//    <tr>
+//      <th>Date</th>
+//      <th colspan="2">07/18/2016</th>
+//      <th colspan="2">07/19/2016</th>
+//    </tr>
+//    <tr class="thead-row2">
+//      <th>Results</th>
+//      <th>Entered</th>
+//      <th>Non-Entered</th>
+//      <th>Entered</th>
+//      <th>Non-Entered</th>
+//    </tr>
+//   </thead>
+//   <tbody>
+//      <tr>
+//          <td class="col-first">Soccer</td>
+//          <td class="text-right">1</td>
+//          <td class="text-right">22</td>
+//          <td class="text-right">0</td>
+//          <td class="text-right">0</td>
+//      </tr>
+//      <tr>
+//          <td class="col-first">Muay Thai</td>
+//          <td class="text-right">1</td>
+//          <td class="text-right">22</td>
+//          <td class="text-right">0</td>
+//          <td class="text-right">0</td>
+//      </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 3.2.2
+
+.tblRpt .col-first {
+    background-color: #ffefde;
+}
+
+// Table 3
+//
+// If you want to apply this style, please use this file <strong>"styles/components/tables.css"</strong></p>
+//
+// markup:
+// <table class="tblRpt tblRpt-bordered tblRpt-striped width-100per">
+//   <thead>
+//    <tr>
+//        <th colspan="3">&nbsp;</th>
+//        <th colspan="3">Member</th>
+//        <th colspan="3">Agent</th>
+//        <th colspan="3">Master</th>
+//        <th colspan="3">Super</th>
+//        <th colspan="2">Company</th>
+//    </tr>
+//    <tr class="thead-row2">
+//        <th>Bet Type</th>
+//        <th>Turnover</th>
+//        <th>Gross Comm</th>
+//        <th>Win/Loss</th>
+//        <th>Comm</th>
+//        <th>Total</th>
+//        <th>Win/Loss</th>
+//        <th>Comm</th>
+//        <th>Total</th>
+//        <th>Win/Loss</th>
+//        <th>Comm</th>
+//        <th>Total</th>
+//        <th>Win/Loss</th>
+//        <th>Comm</th>
+//        <th>Total</th>
+//        <th>Comm</th>
+//        <th>Total</th>
+//    </tr>
+//   </thead>
+//   <tbody>
+//      <tr>
+//            <td>Over/Under</td>
+//            <td>85.00</td>
+//            <td>0.21</td>
+//            <td>15.00</td>
+//            <td>0.09</td>
+//            <td class="bold">15.09</td>
+//            <td class="altercol">-3.00</td>
+//            <td class="altercol">0.05</td>
+//            <td class="altercol bold">-2.95</td>
+//            <td>-4.50</td>
+//            <td>-0.05</td>
+//            <td class="b">-4.55</td>
+//            <td class="altercol">-2.85</td>
+//            <td class="altercol">-0.02</td>
+//            <td class="altercol bold">-2.87</td>
+//            <td>0.07</td><td class="bold">-4.72</td>
+//        </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 3.2.3
+
+.altercol {
+    background-color: #f6f2d7;
+    text-align: right;
+}
+
+
+// Table 4
+//
+// If you want to apply this style, please use this file <strong>"styles/components/tables.css"</strong></p>
+//
+// markup:
+// <table class="tblRpt tblRpt-bordered tblRpt-striped width-100per">
+//   <thead>
+//    <tr>
+//        <th colspan="3">&nbsp;</th>
+//        <th class="SC" colspan="11">Soccer</th>
+//        <th class="SL" colspan="4">Soccer Live!</th>
+//        <th class="BK" colspan="4">Basketball</th>
+//        <th class="FB" colspan="4">Football</th>
+//        <th class="TN" colspan="5">Tennis</th>
+//        <th class="BB" colspan="3">Baseball</th>
+//        <th class="GF" colspan="4">Golf</th>
+//        <th class="MS" colspan="2">Motor Sports</th>
+//        <th class="OS" colspan="4">Other Sports</th>
+//        <th class="MP">Mix Sports Parlay</th>
+//        <th class="OS">HR Fixed Odds</th>
+//        <th>&nbsp;</th>
+//    </tr>
+//    <tr class="thead-row2-pt">
+//        <th class="thead-row">#</th>
+//        <th class="thead-row">Username</th>
+//        <th>&nbsp;</th>
+//        <th class="SC">HDP</th>
+//        <th class="SC">O/U</th>
+//        <th class="SC">1st Hdp</th>
+//        <th class="SC">1st OU</th>
+//        <th class="SC">O/E</th>
+//        <th class="SC">1 X 2</th>
+//        <th class="SC">CS</th>
+//        <th class="SC">TG</th>
+//        <th class="SC">MP</th>
+//        <th class="SC">Outright</th>
+//        <th class="SC">Others</th>
+//        <th class="SL">HDP</th>
+//        <th class="SL">O/U</th>
+//        <th class="SL">1st Hdp</th>
+//        <th class="SL">1st OU</th>
+//        <th class="BK cHeader">HDP</th>
+//        <th class="BK cHeader">O/U</th>
+//        <th class="BK cHeader">O/E</th>
+//        <th class="BK cHeader">ML</th>
+//        <th class="FB">HDP</th>
+//        <th class="FB">O/U</th>
+//        <th class="FB">O/E</th>
+//        <th class="FB">ML</th>
+//        <th class="TN cHeader">HDP</th>
+//        <th class="TN cHeader">O/U</th>
+//        <th class="TN cHeader">O/E</th>
+//        <th class="TN cHeader">ML</th>
+//        <th class="TN cHeader">Others</th>
+//        <th class="BB">HDP</th>
+//        <th class="BB">O/U</th>
+//        <th class="BB">ML</th>
+//        <th class="GF cHeader">HDP</th>
+//        <th class="GF cHeader">O/U</th>
+//        <th class="GF cHeader">O/E</th>
+//        <th class="GF cHeader">ML</th>
+//        <th class="MS">HDP</th>
+//        <th class="MS">ML</th>
+//        <th class="OS cHeader">HDP</th>
+//        <th class="OS cHeader">O/U</th>
+//        <th class="OS cHeader">O/E</th>
+//        <th class="OS cHeader">ML</th>
+//        <th class="MP">MP</th>
+//        <th class="OS cHeader">ML</th>
+//        <th class="thead-row">Username</th>
+//    </tr>
+//   </thead>
+//   <tbody>
+//      <tr class="BgEven">
+//            <td rowspan="2" =rowspan="2">1</td>
+//            <td rowspan="2" class="l"><a href='javascript;'>agent01</a></td>
+//            <td class="col-sma">M</td>
+//            <td class="SC">0.74</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SL">0.20</td>
+//            <td class="SL">0.20</td>
+//            <td class="SL">0.20</td>
+//            <td class="SL">0.20</td>
+//            <td class="BK coPT">0.20</td>
+//            <td class="BK coPT">0.20</td>
+//            <td class="BK coPT">0.20</td>
+//            <td class="BK coPT">0.20</td>
+//            <td class="FB">0.20</td>
+//            <td class="FB">0.20</td>
+//            <td class="FB">0.20</td>
+//            <td class="FB">0.20</td>
+//            <td class="TN coPT">0.20</td>
+//            <td class="TN coPT">0.20</td>
+//            <td class="TN coPT">0.20</td>
+//            <td class="TN coPT">0.20</td>
+//            <td class="TN coPT">0.20</td>
+//            <td class="BB">0.20</td>
+//            <td class="BB">0.20</td>
+//            <td class="BB">0.20</td>
+//            <td class="GF coPT">0.20</td>
+//            <td class="GF coPT">0.20</td>
+//            <td class="GF coPT">0.20</td>
+//            <td class="GF coPT">0.20</td>
+//            <td class="MS">0.20</td>
+//            <td class="MS">0.20</td>
+//            <td class="OS coPT">0.20</td>
+//            <td class="OS coPT">0.20</td>
+//            <td class="OS coPT">0.20</td>
+//            <td class="OS coPT">0.20</td>
+//            <td class="MP">0.20</td>
+//            <td class="OS coPT">0.20</td>
+//            <td rowspan="2" class="l"><a href='javascript;'>agent01</a></td>
+//        </tr>
+//        <tr class="BgOdd">
+//            <td class="col-sma">A</td>
+//            <td class="SC">0.74</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SC">0.20</td>
+//            <td class="SL">0.20</td>
+//            <td class="SL">0.20</td>
+//            <td class="SL">0.20</td>
+//            <td class="SL">0.20</td>
+//            <td class="BK coPT">0.20</td>
+//            <td class="BK coPT">0.20</td>
+//            <td class="BK coPT">0.20</td>
+//            <td class="BK coPT">0.20</td>
+//            <td class="FB">0.20</td>
+//            <td class="FB">0.20</td>
+//            <td class="FB">0.20</td>
+//            <td class="FB">0.20</td>
+//            <td class="TN coPT">0.20</td>
+//            <td class="TN coPT">0.20</td>
+//            <td class="TN coPT">0.20</td>
+//            <td class="TN coPT">0.20</td>
+//            <td class="TN coPT">0.20</td>
+//            <td class="BB">0.20</td>
+//            <td class="BB">0.20</td>
+//            <td class="BB">0.20</td>
+//            <td class="GF coPT">0.20</td>
+//            <td class="GF coPT">0.20</td>
+//            <td class="GF coPT">0.20</td>
+//            <td class="GF coPT">0.20</td>
+//            <td class="MS">0.20</td>
+//            <td class="MS">0.20</td>
+//            <td class="OS coPT">0.20</td>
+//            <td class="OS coPT">0.20</td>
+//            <td class="OS coPT">0.20</td>
+//            <td class="OS coPT">0.20</td>
+//            <td class="MP">0.20</td>
+//            <td class="OS coPT">0.20</td>
+//        </tr>
+//   </tbody>
+// </table>
+//
+// Styleguide 3.2.4
+
+.col-sma {
+    background-color: #f8d7a2;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+tr.thead-row2-pt th {
+    background-color: #f0f1c7;
+    color: $text-color;
+
+    &.thead-row {
+        background-color: $table-header-bg-color;
+        color: $table-header-color;
+    }
+}
+
+@import '../scss/vendors-ex/fanexGrid-ex.scss';
