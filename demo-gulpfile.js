@@ -23,7 +23,8 @@ gulp.task('styleguide:generate', function() {
           '<script src="/js/styleguide/components/moment/moment.js"></script>',
           '<script src="/js/styleguide/components/FanexGrid/Fanex.Grid.js"></script>',
           '<script src="/js/styleguide/components/FanexGrid/Fanex.Pagination.js"></script>',
-          '<script src="/js/styleguide/components/scrollbar/jquery.mCustomScrollbar.js"></script>'
+          '<script src="/js/styleguide/components/scrollbar/jquery.mCustomScrollbar.js"></script>',
+          '<script src="/js/styleguide/components/autocomplete/autocomplete.js"></script>'
         ],
         disableEncapsulation: true
       }))

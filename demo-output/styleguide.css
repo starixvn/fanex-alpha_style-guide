@@ -2749,6 +2749,31 @@ tr.thead-row2-pt th {
       .tablesorter .sorting.col-combine .prior-sortedcolumn:after {
         content: '\e960'; }
 
+.shadow {
+  width: 154px;
+  position: fixed !important;
+  visibility: hidden;
+  cursor: default;
+  z-index: 1000; }
+
+.output {
+  position: relative;
+  top: 2px;
+  left: 1px;
+  width: 100%;
+  border: 1px solid #dfdfdf;
+  border-radius: 1px;
+  color: #333;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+.opOut, .opOver {
+  padding: 8px 10px;
+  color: #333; }
+
+.opOver {
+  background-color: #ddd; }
+
 .menu-item {
   position: relative;
   color: #222;

@@ -1,0 +1,17 @@
+<input maxlength="50" id="txtUsername" type="text" />
+<div class="shadow" id="shadow" />
+<div class="output" id="output" />
+initAutoComplete('txtUsername', '_AccountInfo/Handlers/QueryUserName.ashx');
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
